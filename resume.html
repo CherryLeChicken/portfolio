@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/resume.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div>
+            <h2>Resume</h2>
+            <p>A summary of my experience.</p>
+            <iframe width="80%" height="1000px"src="https://docs.google.com/document/d/1aYmZTZFflDY9AzUHnQJND5-H8QEzgrZkqSggGciID24/edit?usp=sharing">Resume</iframe>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

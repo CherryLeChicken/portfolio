@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <!-- Slideshow -->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/photo1.jpg" alt="Hello" width="1440" height="961">
+                <div class="text">Hello, my name is <br><span>Cherry</span></div>
+                <div class="underline"></div>
+            </div>
+            <div class="slide fade">
+                <img src="images/photo4.jpg" alt="Bonjour" width="1440" height="961">
+                <div class="text">Bonjour! Je m'appelle <br><span>Cherry</span></div>
+                <div class="underline"></div>
+            </div>
+            <div class="slide fade">
+                <img src="images/photo3.jpg" alt="你好" width="1440" height="961">
+                <div class="text">你好，我叫 <br><span>柯祥萱
+
+
+                </span></div>
+                <div class="underline"></div>
+            </div>
+            <div class="slide fade">
+                <img src="images/photo2.JPG" alt="안녕하세요" width="1440" height="961">
+                <div class="text">안녕하세요<br><span>체리</span><br>예요</div><br>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h2>About Me</h2>
+            <p>Hello, I'm Cherry! I'm a student at the University of Waterloo in the Global Business and Digital Arts program.</p>
+            <div class="btn-group">
+                <a class="button" href="portfolio.html" >View Portfolio</a>
+                <a class="button" href="resume.html">See Resume</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-box">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

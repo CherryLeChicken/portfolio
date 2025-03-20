@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/astro.css">
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="/images/astrologo.webp" width="80%">
+            <div class="project-text">
+                <h2>Astro</h2>
+                <h3>Brand Redesign</h3>
+                <p>GBDA 202​</p>
+            </div>
+            
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Redesign</h1>
+            <div class="project">
+                <img src="images/repackage.jpg" alt="Astro Packaging">
+                <div class="project-text">
+                    <p><b>Packaging</b></p>
+                    <p>For this project, we were tasked to redesign a brand and its packaging with a partner. We chose Astro Yogurt due to its traditional packaging. Consumers today prefer clean, easy-to-navigate packaging that highlights key information. A simplified design makes Astro more approachable, easier to identify on shelves, and instantly recognizable as a high-quality Canadian product.</p>
+                </div>
+               
+            </div>
+            
+            <div class="pdf">
+                <iframe class="pdf"src="/images/astropdf.pdf" width="800" height="500">
+            </div>
+     
+            
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/portfolio.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <!-- Image Section -->
+    <section class="image-gallery">
+        <h2>Explore My Work</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <a href="sabor.html">
+                    <img src="images/saborlogo.png" alt="Sabor">
+                    <div class="overlay">
+                        <h3>Sabor</h3>
+                        <p>Founded a Roblox group and developed games and products for the community.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="sCanadian.html">
+                    <img src="images/scanadian.png" alt="sCanadian">
+                    <div class="overlay">
+                        <h3>sCanadian</h3>
+                        <p>Designed and developed a Canadian product scanner during Hack Canada 2025.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="astro.html">
+                    <img src="/images/astrologo.webp" alt="Astro">
+                    <div class="overlay">
+                        <h3>Astro Brand Repackage</h3>
+                        <p>Redesigned a brand for GBDA 202.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="page3.html">
+                    <img src="images/rogers.png" alt="Rogers">
+                    <div class="overlay">
+                        <h3>Rogers Brand Package</h3>
+                        <p>Designed a brand package for Rogers Beyond The Seat during the Rogers Design Jam 2025.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="page3.html">
+                    <img src="images/capsule.png" alt="Capsule">
+                    <div class="overlay">
+                        <h3>Capsule</h3>
+                        <p>Designed a work tool that reimagines remote work during Mosaic 2025.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="image-item">
+                <a href="page3.html">
+                    <img src="images/enhypen.jpeg" alt="Enhypen">
+                    <div class="overlay">
+                        <h3>Enhypen Fanpage</h3>
+                        <p>Designed and programmed a website (HTML & CSS) for GBDA 228.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
