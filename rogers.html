@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/rogers.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="./images/rogers.png" alt="Capsule">
+            <div class="project-text">
+                <h1>Rogers Design Jam</h1>
+                <p>Developed a Rogers "Beyond the Seat" Brand Package at the uXperience Design Jam at the Stratford School of Design and Interaction.</p>
+                <div class="btn-group">
+                    <a class="button" target="_blank" href="https://www.canva.com/design/DAGdNR4zHDM/ygA9M_-MYQbhzlm7y7NImg/edit?utm_content=DAGdNR4zHDM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">View Presentation</a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <p><b>Design Challenge</b></p>
+                <p>Build a brand strategy for Rogers Beyond the Seat program.</p>
+                <p><b>Our Solution</b></p>
+                <iframe class="pdf"src="./images/rogers.pdf" width="800" height="500"></iframe>
+                <p><b>Key Features:</b></p>
+                <ul>
+                    <li>Partner with lifestyle influencers to increase the program's visibility.</li>
+                    <li>Dedicate a page on the Rogers website to improve accessibility to the program's information.</li>
+                    <li>Provide real-time notifications for contests, prizes, and events while offering exclusive in-app live streams with a trial of Rogers’ 5G data.</li>
+                    <li>Set up interactive booths in high-traffic locations like universities and transit stations, featuring games, exclusive prizes, VR experiences, and 5G demos.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>UI Gallery</h2>
+        <div class="gallery-container">
+            <img src="./images/RogersWebsite.png" alt="UI Screenshot 1" class="gallery-img">
+            <img src="./images/RogersAppLogin.png" alt="UI Screenshot 2" class="gallery-img">
+            <img src="./images/RogersAppHome.png" alt="UI Screenshot 3" class="gallery-img">
+        </div>
+    
+        <div id="lightbox">
+            <span class="close">&times;</span>
+            <img id="lightbox-img">
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/gallery.js"></script>
+</body>
+</html>
