@@ -1,5 +1,5 @@
 body {
-    color: #000;
+    color: white;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -76,7 +76,7 @@ section div {
 }
 
 .project-text {
-    width: 60%;
+    min-width: 60%;
 
 }
 

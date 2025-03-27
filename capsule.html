@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/capsule.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="./images/capsulesquare.png" alt="Capsule">
+            <div class="project-text">
+                <h1>Capsule</h1>
+                <p>Capsule was developed as part of Mosaic 2025, a design jam focused on tackling real-world challenges. </p>
+                <div class="btn-group">
+                    <a class="button" target="_blank" href="https://www.canva.com/design/DAGhJ8jDLMY/b0iU_XPWR8dc05VBk1GJkQ/edit?utm_content=DAGhJ8jDLMY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">View Presentation</a>
+                    <a class="button" target="_blank" href="https://www.figma.com/design/oWHnUb9cdwWZEZyQf7A58Z/Mosaic?node-id=0-1&t=uJZ1UDwQ1YuLdIS1-1">View Figma</a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <p><b>Problem Statement</b></p>
+                <p>Remote teams struggle with inefficient communication across time zones, difficulty tracking project progress, and a lack of spontaneous interactions that foster creativity and team bonding. These challenges, along with the complexities of onboarding new members, lead to decreased productivity, missed deadlines, and lower employee satisfaction. While existing tools address individual issues, there is no comprehensive solution that seamlessly integrates all these needs into one platform. Solving this is essential for maintaining team performance and competitiveness in today’s remote work landscape.</p>
+                <p><b>Our Solution</b></p>
+                <p>Capsule bridges the gap between remote work and collaboration by mirroring the benefits of a physical office in a virtual space. With Capsule, teams can communicate naturally, collaborate efficiently, and maintain a strong company culture no matter where they are.</p>
+                <p><b>Key Features:</b></p>
+                <ul>
+                    <li>Spacial voice chat: Talk to teammates naturally, just like in a real office.</li>
+                    <li>Interactive meeting rooms: Equipped with whiteboards, calendars, and shared documents, everything is centralized and accessible.</li>
+                    <li>Break room: Interactive area to replicate spontaneous office conversations.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>UI Gallery</h2>
+        <div class="gallery-container">
+            <img src="./images/CapsuleOffice.png" alt="UI Screenshot 1" class="gallery-img">
+            <img src="./images/CapsuleMeetingRoom.png" alt="UI Screenshot 2" class="gallery-img">
+            <img src="./images/CapsuleFiles.png" alt="UI Screenshot 3" class="gallery-img">
+            <img src="./images/CapsuleTasks.png" alt="UI Screenshot 4" class="gallery-img">
+            <img src="./images/CapsuleCalendar.png" alt="UI Screenshot 4" class="gallery-img">
+        </div>
+    
+        <div id="lightbox">
+            <span class="close">&times;</span>
+            <img id="lightbox-img">
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
