@@ -93,3 +93,11 @@ section div {
     }
 }
 
+p a {
+    color: #fca1e5;
+    text-decoration: none;
+}
+
+p a:hover {
+    color:#ff52d4;
+}
