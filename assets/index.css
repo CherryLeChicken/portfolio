@@ -1,5 +1,4 @@
 #hero-graphic {
-#hero-graphic {
     position: relative;
     width: 100%;
     min-height: 50vh;
@@ -32,7 +31,6 @@
     100% { background-position: 0% 50%; }
 }
 
-#particle-canvas {
 
 
 .hero-text {
