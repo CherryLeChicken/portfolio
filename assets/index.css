@@ -1,121 +1,46 @@
-/* Slideshow */
-.slideshow-container {
+#hero-graphic {
     position: relative;
     width: 100%;
-    height: 500px;
+    min-height: 50vh;  /* <-- changed to 50vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a1a1a, #121212);
     overflow: hidden;
 }
 
-.slide {
+
+
+.hero-text {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff52d4, #fca1e5, #ffe3f8);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 82, 212, 0.5);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particle-canvas {
     position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-
-.slide img {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    text-align: center;
-    font-weight: bold;
-    color: white; 
-}
-
-
-.text span {
-    font-size: 40px;
-    color: #ff52d4;
-}
-
-.underline {
-    content: '';
-    position: absolute;
-    margin: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.65);
-}
-
-
-/* Slideshow */
-
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 90vh; 
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%; 
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-h2 {
-    color: #ff52d4;
-}
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    text-align: center;
-
-    z-index: 10; /* Make sure text is above the image */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    padding: 25px;
-    border-radius: 5px;
-}
-
-
-.text span {
-    font-size: 88px;
-    color: #ff52d4;
-    font-weight: bold;
-}
-
-.underline {
-    content: '';
-    position: absolute;
-    margin: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.65);
-}
 
 /* About Me */
 #about {
@@ -145,5 +70,5 @@ h2 {
   
 span {
    font-weight: 600;
-   color:#ffe3f8;
+   color:#eca7da;
 }
