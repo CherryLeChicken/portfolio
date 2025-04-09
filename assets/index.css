@@ -1,4 +1,5 @@
 #hero-graphic {
+#hero-graphic {
     position: relative;
     width: 100%;
     min-height: 50vh;
@@ -32,11 +33,37 @@
 }
 
 #particle-canvas {
+
+
+.hero-text {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff52d4, #fca1e5, #ffe3f8);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 82, 212, 0.5);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particle-canvas {
     position: absolute;
+    top: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    pointer-events: none;
     z-index: 1;
     pointer-events: none;
 }
@@ -70,5 +97,6 @@
   
 span {
    font-weight: 600;
+   color:#eca7da;
    color:#eca7da;
 }
