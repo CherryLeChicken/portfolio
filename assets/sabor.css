@@ -21,7 +21,7 @@ h2, h3 {
 }
 
 h2 {
-    color: #ff52d4;
+    color: #c6d4da;
     font-size: 28px;
 }
 
@@ -94,10 +94,10 @@ section div {
 }
 
 p a {
-    color: #fca1e5;
+    color: #c6d4da;
     text-decoration: none;
 }
 
 p a:hover {
-    color:#ff52d4;
+    color:#9fe7e6;
 }

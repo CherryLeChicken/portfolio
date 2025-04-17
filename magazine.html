@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Ke</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/magazine.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="./images/magazinesquare.png" alt="Magazine">
+            <div class="project-text">
+                <h1>Magazine</h1>
+                <p><b>Course:</b> GBDA 101 - Introduction to Digital Media Design<br>
+     <b>Date:</b> April 2024</p>
+                <p>Tasked with designing a magazine that showcases the three projects from the GBDA 101 design course. I used Adobe Illustrator to create the visual elements and Adobe InDesign to assemble the final layout.</p>   
+            </div>
+            
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                
+                <p><b>Assignment 1: Logo Design</b></p>
+                <p>I created a logo based on a classmate’s personality by researching their traits and translating them into visual design elements. The result was a personalized brand mark that reflected their identity.</p>
+                
+                <p><b>Assignment 2: Horror-Themed Diptych Posters</b></p>
+                <p>Using self-taken photographs of Waterloo’s Village 1 residence, I designed a diptych that captured a horror theme, which embodied my first impressions of the residence. This project helped me improve my photography, composition, and visual storytelling skills.</p>
+                
+                <p><b>Assignment 3: Designing an Emotion</b></p>
+                <p>I was assigned the emotion "delight". I brainstormed, prototyped, and tested designs that evoked joy. I explored how color and form can be used intentionally to create emotional responses in users.</p>
+
+            </div>
+            
+        </div>
+        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/123df3d672.html" style="border: 1px solid lightgray; width: 100%; min-height: 700px;"></iframe>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Me!</h2>
+            <div class="footer-info">
+                <p>📍 Waterloo, Ontario</p>
+                <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
+                
+            </div>
+        </div>
+    </footer>
+   
+    <script src="./scripts/navbar.js"></script>
+      
+</body>
+</html>
