@@ -19,7 +19,7 @@
 
 .image-item {
     position: relative;
-    width: 250px; /* Square size */
+    width: 250px; 
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
@@ -27,10 +27,14 @@
 }
 
 .image-item img {
+    object-fit: contain;
     width: 100%;
     height: 100%;
-    object-fit: scale-down;
     transition: transform 0.3s ease;
+}
+
+.image-item img.fit-width {
+    object-fit: cover;
 }
 
 .image-item:hover img {
@@ -71,3 +75,74 @@
     color: white;
 }
 
+/* tags */
+.tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+.image-item.border {
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: black;
+
+}
+
+
+/* Tag Colors */
+/* roblox studio */
+.studio {
+    background-color: #00e6fe;
+}
+/* game design  */
+.roblox {
+    background-color: #4c5362;
+}
+/* marketing*/
+.marketing {
+    background-color: #ff52d4;
+}
+/* programming */
+.programming {
+    background-color: #b86eff;
+}
+/* photoshop*/
+.photoshop {
+    background-color: #56ccf2;
+}
+/* competition */
+.competition {
+    background-color: #7ed957;
+}
+/* illustrator */
+.illustrator {
+    background-color: #ff9f1c;
+}
+/* figma */
+.figma {
+    background-color: #eb4b1e;
+}
+/* in design */
+.indesign {
+    background-color: #ff6b6b;
+}
+
+/* ux/ui */
+.ui {
+    background-color: #a5228a;
+}
