@@ -289,73 +289,97 @@ body {
 
     .nav-left {
         width: 100%;
-    }
-
-    .nav-right {
-        width: 100%;
-        margin-left: 0;
+        justify-content: space-between;
     }
 
     .nav-right {
         display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.98);
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
         left: 0;
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 82, 212, 0.1);
-        z-index: 1000;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        gap: 1rem;
+        align-items: flex-start;
     }
 
     .nav-right.show {
         display: flex;
-        animation: slideDown 0.3s ease;
+        animation: slideDown 0.3s ease-out;
     }
 
     @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .nav-right a,
     .dropbtn {
         width: 100%;
-        padding: 1rem;
+        padding: 0.75rem 1rem;
         text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        
+        border-radius: 5px;
     }
 
     .dropdown {
         width: 100%;
     }
 
+    .dropbtn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding-right: 2rem !important;
+    }
+
+    .dropbtn::after {
+        content: '▼';
+        position: absolute;
+        right: 1rem;
+        font-size: 0.6rem;
+        transition: transform 0.3s ease;
+        transform: rotate(var(--rotation, 0deg));
+    }
+
+    .dropbtn span {
+        flex: 1;
+    }
+
     .dropdown-content {
         position: static;
-        background-color: rgba(26, 26, 26, 0.95);
         width: 100%;
-        border: none;
-        border-radius: 0;
-        margin-top: 0;
-        padding: 0;
+        margin-top: 0.5rem;
         display: none;
+        background-color: rgba(26, 26, 26, 0.95);
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     .dropdown-content.show {
         display: block;
+        animation: slideDown 0.3s ease-out;
     }
 
     .hamburger {
         display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
     }
 
     .dropdown-content a {
-        padding-left: 2rem;
-    }
-
-    .dropbtn::before {
-        margin-left: auto;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
     }
 }
 
