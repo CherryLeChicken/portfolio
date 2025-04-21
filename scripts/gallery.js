@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lightbox.style.display = "flex";
             lightboxImg.src = this.src;
         });
+
     });
 
     close.addEventListener("click", function () {
