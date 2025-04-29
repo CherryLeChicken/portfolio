@@ -3,6 +3,23 @@ function toggleNav() {
     nav.classList.toggle("show");
 }
 
+// Add mobile dropdown functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        
+        dropbtn.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) { // Only for mobile
+                // On mobile, just navigate to portfolio page
+                window.location.href = 'portfolio.html';
+            }
+        });
+    });
+});
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.topnav');
     if (window.scrollY > 50) {
