@@ -6,6 +6,7 @@
     <title>Cherry Ke</title>
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -20,6 +21,7 @@
     
     <section id="hero-graphic">
         <h1 class="hero-text">Cherry Ke</h1>
+        <p class="hero-subtitle">Global Business & Digital Arts Student @ University of Waterloo</p>
         <canvas id="particle-canvas"></canvas>
     </section>
       
@@ -28,17 +30,145 @@
   
 
     <section id="about">
-        <div>
+        <div class="about-content">
             <h2>About Me</h2>
-            <p>My journey into design and development began with one goal: <span>to build my own Roblox café</span>. With no budget to hire a team, I taught myself <span>UI design, coding, and game development</span> through countless YouTube tutorials and Google searches. After months of trial and error, I co-founded my own Roblox group, Sabor, and built a fully functioning café game that players could explore, interact, and enjoy. 
-            <br><br>Through this process, I gained hands-on experience in game design, user experience design, and collaboration. I learned how to <span>create intuitive interfaces, write efficient scripts, and bring ideas to life in a digital space.</span> More importantly, this experience opened my eyes to the combination of design, technology, and business—leading me to pursue <span>Global Business and Digital Arts at the University of Waterloo</span>. Now, I apply that same resourcefulness to creating engaging digital products, always ready to tackle new challenges and turn ideas into reality!</p>
+            <p>My journey into design and development began with a dream: to build my own Roblox café. With no budget, I taught myself UI design, coding, and game development, which eventually led to co-founding the Roblox group Sabor and launching a fully interactive café game. I bring that same creativity and drive to my work as a Global Business and Digital Arts student, creating digital experiences by combining design, technology, and business.</p>
             <div class="btn-group">
-                <a class="button" href="portfolio.html" >View Portfolio</a>
+                <a class="button" href="portfolio.html">View Portfolio</a>
                 <a class="button" href="resume.html">See Resume</a>
             </div>
         </div>
     </section>
 
+    <section id="skills">
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>My Toolbox</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-camera"></i>
+                        <span>Adobe Photoshop</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>Adobe Illustrator</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-film"></i>
+                        <span>Adobe Premiere Pro</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Microsoft Excel</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Roblox Studio</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category">
+                <h3>I Speak</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-language"></i>
+                        <span>English</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-language"></i>
+                        <span>French</span>
+                        <div class="language-badge">
+                            <i class="fas fa-award badge-icon"></i>
+                            <div class="badge-content">
+                                <div class="badge-title">Immersion Certificate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-language"></i>
+                        <span>Mandarin</span>
+                        <div class="language-badge">
+                            <i class="fas fa-certificate badge-icon"></i>
+                            <div class="badge-content">
+                                <div class="badge-title">HSK Level 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-language"></i>
+                        <span>Korean (Beginner)</span>
+                        <div class="language-badges">
+                            <div class="language-badge">
+                                <i class="fas fa-fire badge-icon"></i>
+                                <div class="badge-content">
+                                    <div class="badge-title">200+ Duolingo Streak</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="featured-projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <a class="button view-all" href="portfolio.html">See All Projects</a>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="sabor.html">
+                    <img src="./images/saborlogo.png" alt="Sabor">
+                    <div class="project-info">
+                        <h3>Sabor</h3>
+                        <p>Founded a Roblox group and developed games and products for the community.</p>
+                        <div class="project-tags">
+                            <span class="tag studio">Roblox Studio</span>
+                            <span class="tag roblox">Game Design</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="project-card">
+                <a href="bananasplit.html">
+                    <img src="./images/bananasplit.png" alt="Banana Split">
+                    <div class="project-info">
+                        <h3>Banana Split</h3>
+                        <p>Designed a grocery splitting application for university students.</p>
+                        <div class="project-tags">
+                            <span class="tag ui">UI/UX</span>
+                            <span class="tag figma">Figma</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="astro.html">
+                    <img src="./images/astrologo.webp" alt="Astro">
+                    <div class="project-info">
+                        <h3>Astro Brand Redesign</h3>
+                        <p>Redesigned the Astro Yogurt brand with a modern and clean aesthetic.</p>
+                        <div class="project-tags">
+                            <span class="tag marketing">Branding</span>
+                            <span class="tag illustrator">Illustrator</span>
+                            <span class="tag photoshop">Photoshop</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- Footer -->
     <footer id="footer">
