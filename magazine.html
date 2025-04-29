@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cherry Ke</title>
-    <link rel="stylesheet" href="assets/main.css">
+    <title>Magazine - GBDA 101 Project</title>
     <link rel="stylesheet" href="assets/magazine.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
 </head>
 <body>
-
     <!-- Navbar -->
     <div id="navbar"></div>
 
@@ -20,35 +21,54 @@
 
     <section>
         <div class="project">
-            <img src="./images/magazinesquare.png" alt="Magazine">
+            <img src="./images/magazinesquare.png" alt="Magazine Design">
             <div class="project-text">
                 <h1>Magazine</h1>
-                <p><b>Course:</b> GBDA 101 - Introduction to Digital Media Design<br>
-     <b>Date:</b> April 2024</p>
-                <p>Tasked with designing and printing a magazine that showcases the three projects from the GBDA 101 design course. I used Adobe Illustrator to create the visual elements and Adobe InDesign to assemble the final layout.</p>   
+                <p>Tasked with designing and printing a magazine that showcases the three projects from the GBDA 101 - Introduction to Digital Media Design. I used Adobe Illustrator to create the visual elements and Adobe InDesign to assemble the final layout.</p>
+                <div class="achievement-badges">
+                    <div class="achievement-badge">
+                        <i class="fas fa-graduation-cap badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Course</div>
+                            <div class="badge-value">GBDA 101</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+        </div>
+
+        <div class="project">
+            <img src="./images/Asset 1.png" alt="Logo Design Assignment">
+            <div class="project-text">
+                <h2>Assignment 1: Logo Design</h2>
+                <p>I created a logo based on a classmate's personality translating their traits into visual design elements. My classmate was a very extroverted and outgoing person who loves expressing themselves through music. The result was a personalized brand mark that reflected their cheerful and outgoing personality and their love for music.</p>
+            </div>
         </div>
 
         <div class="project">
             <div class="project-text">
-                
-                <p><b>Assignment 1: Logo Design</b></p>
-                <p>I created a logo based on a classmate’s personality translating their traits into visual design elements. The result was a personalized brand mark that reflected their identity.</p>
-                
-                <p><b>Assignment 2: Horror-Themed Diptych Posters</b></p>
-                <p>Using self-taken photographs of Waterloo’s Village 1 residence, I designed a diptych that captured a horror theme, which embodied my first impressions of the residence. This project helped me improve my photography, composition, and visual storytelling skills.</p>
-                
-                <p><b>Assignment 3: Designing an Emotion</b></p>
-                <p>I was assigned the emotion "delight". I brainstormed, prototyped, and tested designs that evoked joy. I explored how color and form can be used intentionally to create emotional responses in users.</p>
-
+                <h2>Assignment 2: Horror-Themed Diptych Posters</h2>
+                <p>Using self-taken photographs of Waterloo’s Village 1 residence, I created a horror-themed diptych that reflected my eerie first impressions of the residence. This project helped me improve my photography, composition, and visual storytelling skills. I also utilized my background in game design to craft the poster’s layout and visual elements, and overall had a lot of fun with the project.</p>
             </div>
-            
         </div>
-        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/123df3d672.html" style="border: 1px solid lightgray; width: 100%; min-height: 700px;"></iframe>
-    </section>
 
-    
+        <div class="diptych-container">
+            <img src="./images/poster1.jpg" alt="V1 Horror Home Screen" class="diptych-image">
+            <img src="./images/poster2.jpg" alt="V1 Horror Gameplay" class="diptych-image">
+        </div>
+
+        <div class="project">
+            <!-- <img src="./images/EmotionDesign.png" alt="Designing an Emotion"> -->
+            <div class="project-text">
+                <h2>Assignment 3: Designing an Emotion</h2>
+                <p>I was assigned to design an object that evoked the emotion "delight". I brainstormed, prototyped, and tested designs while exploring how color and form can be used intentionally to create emotional responses in users. My final prototype was a pastel pink and white heart-shaped wand molded out of air-dry clay that acts as a sugar sprinkler.</p>
+            </div>
+        </div>
+
+        <div id="flipbook">
+            <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/123df3d672.html" style="border: 1px solid lightgray; width: 100%; min-height: 700px;"></iframe>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer">
@@ -58,12 +78,10 @@
                 <p>📍 Waterloo, Ontario</p>
                 <p>📧 <a href="mailto:c5ke@uwaterloo.ca">c5ke@uwaterloo.ca</a></p>
                 <p>🔗 <a href="https://www.linkedin.com/in/cherry-ke-91167a135/" target="_blank">LinkedIn</a></p>
-                
             </div>
         </div>
     </footer>
-   
+
     <script src="./scripts/navbar.js"></script>
-      
 </body>
 </html>
