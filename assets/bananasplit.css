@@ -61,6 +61,8 @@ p {
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.03);
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project:hover {
@@ -82,7 +84,105 @@ p {
 }
 
 .project-text {
-    width: 60%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-text h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #f99b21, #fde907);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(249, 155, 33, 0.3);
+}
+
+.project-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #c6d4da;
+}
+
+.project-text ul {
+    margin: 25px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.project-text ul li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #c6d4da;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-text ul li::before {
+    content: '•';
+    color: #f99b21;
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.key-findings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.finding {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.finding:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(249, 155, 33, 0.2);
+}
+
+.finding h4 {
+    color: #f99b21;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.finding p {
+    margin: 0;
+    color: #c6d4da;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .key-findings {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .finding {
+        padding: 20px;
+        min-height: auto;
+    }
 }
 
 ul {
