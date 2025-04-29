@@ -3,31 +3,6 @@ function toggleNav() {
     nav.classList.toggle("show");
 }
 
-// Add mobile dropdown functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-        
-        dropbtn.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) { // Only for mobile
-                e.preventDefault();
-                dropdownContent.classList.toggle('show');
-                
-                // Toggle the dropdown icon rotation
-                const icon = dropbtn.querySelector('::before');
-                if (dropdownContent.classList.contains('show')) {
-                    dropbtn.style.setProperty('--rotation', '180deg');
-                } else {
-                    dropbtn.style.setProperty('--rotation', '0deg');
-                }
-            }
-        });
-    });
-});
-
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.topnav');
     if (window.scrollY > 50) {
@@ -51,3 +26,13 @@ if (navbarContainer) {
 
     observer.observe(navbarContainer, { childList: true });
 }
+
+// Add click event listeners to all navbar links
+document.querySelectorAll('.nav-right a, .dropdown-content a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.getElementById('navLinks').classList.remove('show');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+    });
+});
