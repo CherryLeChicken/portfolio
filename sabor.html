@@ -87,6 +87,28 @@
             </div>
             <img src="./images/saborcafe.avif" alt="Sabor Cafe">
         </div>
+        <!-- Timeline for Sabor Cafe (moved outside .project for full width) -->
+        <div class="timeline-section">
+            <h4 class="timeline-title">Sabor Cafe Over The Years</h4>
+            <div class="timeline-container">
+                <input type="range" min="0" max="2" value="0" class="timeline-slider" id="saborCafeTimelineSlider">
+                <div class="timeline-labels">
+                    <span>2019</span>
+                    <span>2020</span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div class="timeline-image-container">
+                <button class="timeline-arrow left" id="timelinePrevBtn" aria-label="Previous image">&lt;</button>
+                <img id="saborCafeTimelineImage" src="./images/saborv3.png" alt="Sabor v3" class="timeline-image">
+                <button class="timeline-arrow right" id="timelineNextBtn" aria-label="Next image">&gt;</button>
+            </div>
+            <div class="timeline-paragraphs">
+                <p class="timeline-paragraph" id="timeline-paragraph-0">2019: Where it all started. We had no budget for anything, in fact I had to find someone with Robux (who became a Co-Founder) to buy the group because I had none (Robux is Roblox's currency). I took it upon myself to learn how to script, build, and design UI to make our first cafe game.</p>
+                <p class="timeline-paragraph" id="timeline-paragraph-1" style="display:none;">2021: This version is also known as the cardboard box. It was kindly built for free by a friend I had met on Roblox, who became a Co-Founder as well. This version was the one where I experimented a lot with the UI and scalability on different devices.</p>
+                <p class="timeline-paragraph" id="timeline-paragraph-2" style="display:none;">Today: Our v2 was where our popularity soared, so this version we had a lot more resources to work with. We hired a builder to build us the beautiful industrial and dark building that we imagined, and a scripter to help make the kitchen more interactive. </p>
+            </div>
+        </div>
         
         <div class="project">
             <img src="./images/gtk.avif" alt="Guess The Kpop">
@@ -161,5 +183,106 @@
 
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/footer.js"></script>
+    <script>
+
+        const saborCafeImages = [
+            [ // 2019
+                './images/saborv1.png',
+                './images/saborv1kitchen.png',
+                './images/saborv1wall.png'
+                
+            ],
+            [ // 2020
+                './images/saborv2.png',
+                './images/saborv2seating.png',
+                './images/saborv2outdoor.png'
+            ],
+            [ // Today
+                './images/saborv3.png',
+                './images/saborinterior.png',
+                './images/saborexterior.png',
+                './images/saborkitchen.png',
+                './images/saborseating.png'
+            ]
+        ];
+        const saborCafeTimelineSlider = document.getElementById('saborCafeTimelineSlider');
+        const saborCafeTimelineImage = document.getElementById('saborCafeTimelineImage');
+        const timelineParagraphs = [
+            document.getElementById('timeline-paragraph-0'),
+            document.getElementById('timeline-paragraph-1'),
+            document.getElementById('timeline-paragraph-2')
+        ];
+        const prevBtn = document.getElementById('timelinePrevBtn');
+        const nextBtn = document.getElementById('timelineNextBtn');
+        let currentYearIndex = 0;
+        let currentImageIndexes = [0, 0, 0]; // Track current image for each year
+
+        function showTimelineImage(yearIdx, imgIdx, fade = true) {
+            if (fade) {
+                saborCafeTimelineImage.classList.add('fade');
+                timelineParagraphs[yearIdx].classList.add('fade');
+                setTimeout(() => {
+                    saborCafeTimelineImage.src = saborCafeImages[yearIdx][imgIdx];
+                    timelineParagraphs.forEach((p, i) => {
+                        p.style.display = (i == yearIdx) ? '' : 'none';
+                        p.classList.remove('fade');
+                    });
+                    saborCafeTimelineImage.classList.remove('fade');
+                }, 350);
+            } else {
+                saborCafeTimelineImage.src = saborCafeImages[yearIdx][imgIdx];
+                timelineParagraphs.forEach((p, i) => {
+                    p.style.display = (i == yearIdx) ? '' : 'none';
+                    p.classList.remove('fade');
+                });
+                saborCafeTimelineImage.classList.remove('fade');
+            }
+        }
+
+        function updateArrowState() {
+            const numImages = saborCafeImages[currentYearIndex].length;
+            const atStart = currentImageIndexes[currentYearIndex] === 0;
+            const atEnd = currentImageIndexes[currentYearIndex] === numImages - 1;
+            if (numImages <= 1) {
+                prevBtn.style.visibility = 'hidden';
+                nextBtn.style.visibility = 'hidden';
+            } else {
+                prevBtn.style.visibility = atStart ? 'hidden' : 'visible';
+                nextBtn.style.visibility = atEnd ? 'hidden' : 'visible';
+            }
+        }
+
+        if (saborCafeTimelineSlider && saborCafeTimelineImage && prevBtn && nextBtn) {
+
+            saborCafeTimelineSlider.addEventListener('input', function() {
+                const newYearIdx = parseInt(this.value);
+                if (newYearIdx === currentYearIndex) return;
+                currentYearIndex = newYearIdx;
+
+                showTimelineImage(currentYearIndex, 0, true);
+                currentImageIndexes[currentYearIndex] = 0;
+                updateArrowState();
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentImageIndexes[currentYearIndex] > 0) {
+                    currentImageIndexes[currentYearIndex]--;
+                    showTimelineImage(currentYearIndex, currentImageIndexes[currentYearIndex], true);
+                    updateArrowState();
+                }
+            });
+           
+            nextBtn.addEventListener('click', function() {
+                if (currentImageIndexes[currentYearIndex] < saborCafeImages[currentYearIndex].length - 1) {
+                    currentImageIndexes[currentYearIndex]++;
+                    showTimelineImage(currentYearIndex, currentImageIndexes[currentYearIndex], true);
+                    updateArrowState();
+                }
+            });
+            // Initial state
+            showTimelineImage(0, 0, false);
+            updateArrowState();
+        }
+    </script>
 </body>
 </html>

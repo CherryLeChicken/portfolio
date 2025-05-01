@@ -20,7 +20,7 @@ window.addEventListener("mousemove", (e) => {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
-    
+
     mouse.x = (e.clientX - rect.left) * scaleX;
     mouse.y = (e.clientY - rect.top) * scaleY;
 
@@ -62,7 +62,7 @@ function handleParticles() {
         particles[i].draw();
 
         if (particles[i].life <= 0 || particles[i].size < 0.5) {
-            particles.splice(i, 1);
+            particles.splice(i, 1); 
             i--;
         }
     }
@@ -77,8 +77,8 @@ function animate() {
         gradient.addColorStop(0, "rgba(255, 82, 212, 0.1)");
         gradient.addColorStop(1, "rgba(255, 82, 212, 0)");
 
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height); 
     }
 
     handleParticles();
