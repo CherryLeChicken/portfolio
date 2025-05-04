@@ -131,7 +131,7 @@
 .button {
     display: inline-block;
     padding: 15px 30px;
-    background: linear-gradient(45deg, #ff52d4, #fca1e5, #ff52d4);
+    background: linear-gradient(45deg, #ff52d4, #ffa1e8, #ff52d4);
     background-size: 200% 200%;
     color: white;
     text-decoration: none;
@@ -204,7 +204,7 @@
 }
 
 .view-all {
-    background: linear-gradient(45deg, #ff52d4, #fca1e5, #ff52d4);
+    background: linear-gradient(45deg, #ff52d4, #ffa1e8, #ff52d4);
     background-size: 200% 200%;
     color: white;
     padding: 12px 24px;

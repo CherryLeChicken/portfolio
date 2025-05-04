@@ -203,6 +203,33 @@ img:hover {
     text-align: left;
 }
 
+.project-text h2 {
+    position: relative;
+    cursor: pointer;
+}
+
+.project-text h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #00e6fe, #9fe7e6);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.project-text h2:hover::after,
+.project-text h2 a:hover::after{
+    width: 100%;
+}
+
+/* Remove underline effect from the <a> */
+.project-text h2 a {
+    text-decoration: none;
+}
+
 .button {
     display: inline-block;
     padding: 12px 24px;
