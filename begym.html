@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BeGym</title>
+    <link rel="icon" type="image/x-icon" href="./images/cherryblossom.png">
+    <link rel="stylesheet" href="assets/begym.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="./images/begym.png" alt="BeGym App Logo">
+            <div class="project-text">
+                <h1>BeGym</h1>
+                <p>BeGym is a beginner-friendly app designed to encourage beginners to get into a fitness routine. It was designed during my BET 350 - Customer Experience Design class in a group of 6 during Winter 2025. The app uses AI and gamification to help users build healthy habits and stay motivated.</p>
+                <div class="achievement-badges">
+                    <div class="achievement-badge">
+                        <i class="fas fa-graduation-cap badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Course</div>
+                            <div class="badge-value">BET 350</div>
+                        </div>
+                    </div>
+                    <div class="achievement-badge">
+                        <i class="fas fa-users badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Team Size</div>
+                            <div class="badge-value">6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h3>Project Overview</h3>
+                <p>BeGym was created to address the intimidation and lack of motivation many beginners face when starting their fitness journey. Our team focused on making fitness accessible, supportive, and fun by combining AI technology with community and gamification elements.</p>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-text">
+                <h3>User Research</h3>
+                <p>We conducted a survey to understand the needs and preferences of potential users. The survey was sent to university students in our BET 350 class, and we received 10 responses. Some of the key findings came from the following survey questions:</p>
+            </div>
+        </div>
+            
+        <button class="accordion">What are your main fitness goals?</button>
+        <div class="panel">
+            <ul>
+                <li>Most students aimed for muscle gain, endurance, and general health.</li>
+                <li>Flexibility and weight loss were also common secondary goals.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">What motivates you to start working out?</button>
+        <div class="panel">
+            <ul>
+                <li>Health concerns, stress relief, and body image were top motivators.</li>
+                <li>Some were driven by productivity and forming healthy habits.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">What challenges or barriers make it difficult to work out?</button>
+        <div class="panel">
+            <ul>
+                <li>Lack of time and motivation due to school/work schedules.</li>
+                <li>Fear of judgment and not knowing how to use gym equipment properly.</li>
+                <li>Limited access to transportation or affordable gyms.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">What features would you want in an AI gym assistant?</button>
+        <div class="panel">
+            <ul>
+                <li>Form correction and real-time feedback ranked highest.</li>
+                <li>Personalized workout plans and motivational reminders were also popular.</li>
+                <li>Some users requested diet tips and gym crowd level predictions.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">How do you prefer to learn or receive feedback?</button>
+        <div class="panel">
+            <ul>
+                <li>Most students preferred video instructions from YouTube or TikTok.</li>
+                <li>Others liked one-on-one guidance or graphic workout sheets.</li>
+                <li>Written workout plans were helpful for goal tracking.</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <div class="project-text">
+                <h3>Customer Journey Map</h3>
+                <p>We created a customer journey map to understand the user's journey from the first time they open the app to the last time they use it. This helped us identify pain points to determine key features for our solution.</p>
+            </div>
+        </div>
+
+        <div class="pdf-container">
+            <iframe src="./images/begym-cjm.pdf" width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>AI Form Checker: Get real-time feedback on your exercise form using your device's camera</li>
+                    <li>AI Chat Gym Coach: Personalized guidance and motivation through an AI-powered chat coach</li>
+                    <li>Community Tab & Leaderboards: Connect with other beginners, share progress, and compete on leaderboards</li>
+                    <li>Widgets & Notifications: Stay on track with workout reminders and progress widgets</li>
+                    <li>Fit Flora Plant: Grow your own virtual plant as you complete workouts and build healthy habits</li>
+                </ul>
+            </div>
+        </div>
+        
+        <section class="gallery">
+            <h2>UI Gallery</h2>
+            <div class="gallery-container">
+                <img src="./images/begym-login.png" alt="Login page" class="gallery-img">
+                <img src="./images/begym-schedule.png" alt="Schedule" class="gallery-img">
+                <img src="./images/begym-workout.png" alt="Workout" class="gallery-img">
+                <img src="./images/begym-correct.png" alt="Wrong form" class="gallery-img">
+                <img src="./images/begym-form.png" alt="Correct form" class="gallery-img">
+                <img src="./images/begym-ai.png" alt="AI chat" class="gallery-img">
+                <img src="./images/begym-flora.png" alt="Fit flora" class="gallery-img">
+                <img src="./images/begym-achievements.png" alt="Achievements" class="gallery-img">
+                <img src="./images/begym-community.png" alt="Community" class="gallery-img">
+                <img src="./images/begym-leaderboard.png" alt="Leaderboard" class="gallery-img">
+                <img src="./images/begym-profile.png" alt="Profile " class="gallery-img">
+                <img src="./images/begym-widget.png" alt="Widget " class="gallery-img">
+                <img src="./images/begym-notification.png" alt="Notification" class="gallery-img">
+            </div>
+        
+            <div id="lightbox">
+                <span class="close">&times;</span>
+                <img id="lightbox-img">
+            </div>
+        
+            
+        </section>
+        <div class="project">
+            <div class="project-text">
+                <h2>Contributions</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-text">
+                <h2>Reflection</h2>
+                <p>Working on BeGym taught me the importance of empathy in design, especially for beginners who may feel overwhelmed by fitness apps. Our focus on encouragement, community, and positive reinforcement helped us create an app that makes fitness approachable and rewarding for everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <div id="footer-container">hihihih</div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            panel.classList.toggle("open");
+        });
+        }
+    </script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/footer.js"></script>
+    <script src="./scripts/gallery.js"></script>
+</body>
+</html>
