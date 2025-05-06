@@ -496,6 +496,15 @@ section.footer-section {
     }
 }
 
+@media (max-width: 600px) {
+    .footer-info {
+        padding: 20px 10px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 a {
     text-decoration: none;
 }
