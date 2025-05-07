@@ -250,83 +250,6 @@ img:hover {
     box-shadow: 0 8px 25px rgba(159, 231, 230, 0.4);
 }
 
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        gap: 40px;
-        padding: 30px;
-    }
-
-    .project-text {
-        width: 100%;
-        order: 2;
-    }
-
-    .project-image {
-        width: 100%;
-        order: 1;
-    }
-
-    .project img {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .stats-container {
-        order: 3;
-        margin-top: 40px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .stat-item {
-        padding: 25px;
-    }
-
-    .stat-value {
-        font-size: 3rem;
-        margin-bottom: 10px;
-    }
-
-    .stat-label {
-        font-size: 1.2rem;
-    }
-
-    .project-header h2 {
-        font-size: 2.8rem;
-        margin-bottom: 15px;
-    }
-
-    .project-header h3 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-
-    .project-header p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
-    .achievement-badge {
-        padding: 15px 25px;
-    }
-
-    .badge-icon {
-        font-size: 24px;
-    }
-
-    .badge-title {
-        font-size: 1.1rem;
-    }
-
-    .badge-value {
-        font-size: 1.4rem;
-    }
-}
-
 p a {
     color: #c6d4da;
     text-decoration: none;
@@ -405,12 +328,99 @@ p a:hover {
 }
 
 @media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .project-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .project-image {
+        width: 100%;
+        order: 1;
+    }
+
+    .project img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+
+    .stats-container {
+        order: 3;
+        margin-top: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stat-item {
+        padding: 25px;
+    }
+
+    .stat-value {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.2rem;
+    }
+
+    .project-header h2 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+    }
+
+    .project-header h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .project-header p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .achievement-badge {
+        padding: 15px 25px;
+    }
+
+    .badge-icon {
+        font-size: 24px;
+    }
+
+    .badge-title {
+        font-size: 1.1rem;
+    }
+
+    .badge-value {
+        font-size: 1.4rem;
+    }
     .achievement-badges {
         justify-content: center;
     }
     
     .achievement-badge {
         padding: 10px 15px;
+    }
+    .timeline-section {
+        padding: 14px 0 18px 0;
+    }
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    .timeline-image {
+        max-width: 98vw;
     }
 }
 
@@ -628,14 +638,3 @@ p a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .timeline-section {
-        padding: 14px 0 18px 0;
-    }
-    .timeline-title {
-        font-size: 1.1rem;
-    }
-    .timeline-image {
-        max-width: 98vw;
-    }
-}
