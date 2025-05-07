@@ -345,12 +345,8 @@ p a:hover {
     }
 
     .project img {
+        width: 100%;
         margin: 0 auto;
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin: 20px auto;
-        border-radius: 12px;
     }
 
     .stats-container {
