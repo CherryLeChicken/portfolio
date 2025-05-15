@@ -98,16 +98,9 @@ p {
 }
 
 .project-text p {
-    font-size: 18px;
     line-height: 1.8;
     margin-bottom: 25px;
     color: #c6d4da;
-}
-
-.project-text ul {
-    margin: 25px 0;
-    padding-left: 0;
-    list-style: none;
 }
 
 .project-text ul li {
@@ -116,15 +109,6 @@ p {
     position: relative;
     color: #c6d4da;
     font-size: 16px;
-    line-height: 1.6;
-}
-
-.project-text ul li::before {
-    content: '•';
-    color: #f99b21;
-    position: absolute;
-    left: 0;
-    font-size: 24px;
     line-height: 1.6;
 }
 
@@ -185,11 +169,6 @@ p {
     }
 }
 
-ul {
-    padding-left: 0;
-    list-style: none;
-}
-
 ul li {
     margin-bottom: 12px;
     padding-left: 25px;
@@ -198,13 +177,6 @@ ul li {
     transition: all 0.3s ease;
 }
 
-ul li::before {
-    content: '•';
-    color: #f99b21;
-    position: absolute;
-    left: 0;
-    font-size: 20px;
-}
 
 ul li:hover {
     transform: translateX(5px);
