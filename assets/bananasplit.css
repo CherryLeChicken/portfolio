@@ -235,26 +235,6 @@ ul li:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.gallery-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(249, 155, 33, 0.3);
-}
 
 @media (max-width: 768px) {
     section {

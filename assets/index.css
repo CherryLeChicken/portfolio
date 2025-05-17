@@ -1,7 +1,7 @@
 #hero-graphic {
     position: relative;
     width: 100%;
-    min-height: 45vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +9,7 @@
     background: radial-gradient(circle at center, #1a1a1a, #121212);
     overflow: hidden;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .hero-text {
@@ -30,6 +31,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: none;
+    padding: 0;
 }
 
 .hero-text::before {
@@ -74,11 +76,14 @@
     font-size: 1.5rem;
     color: #ffc3f4;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     z-index: 2;
     text-align: center;
     max-width: 800px;
     line-height: 1.4;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @keyframes gradientShift {
@@ -122,9 +127,19 @@
     position: relative;
     display: flex;
     align-items: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#about:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 82, 212, 0.3);
+    box-shadow: 0 15px 35px rgba(255, 82, 212, 0.15);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
 }
 
 #about::before {
+    border-radius: 24px;
     content: '';
     position: absolute;
     top: 0;
@@ -222,7 +237,6 @@
     padding: 80px 20px;
     text-align: center;
     background: #000;
-    margin: 40px 0;
     position: relative;
     overflow: visible;
     min-height: 650px;
@@ -425,34 +439,11 @@
     opacity: 0.9;
 }
 
-/* Footer */
-.footer-box {
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    background: #000;
-    position: relative;
-    z-index: 2;
-    margin-top: 100px;
-}
-
-#footer {
-    background: #000;
-    text-align: center !important; 
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    padding: 40px 0;
-}
-
 /* Skills Section */
 #skills {
     padding: 80px 20px;
     background: #000;
-    margin: 40px 0;
+    margin: 40px 0 0 0;
     position: relative;
 }
 
@@ -558,7 +549,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 5px;
 }
 
 .language-badge {
@@ -646,14 +636,14 @@
         text-align: center;
         margin-bottom: 20px;
         line-height: 1.2;
-        background-size: 200% 200%;
+        padding: 0;
     }
     .hero-subtitle {
         font-size: 1.1rem;
-        padding: 0 10px;
-        margin-bottom: 24px;
+        padding: 0;
+        margin: 0 auto 24px;
         line-height: 1.4;
-        max-width: 100%;
+        max-width: 80%;
         text-align: center;
     }
     #about {
@@ -801,17 +791,19 @@
 @media (max-width: 480px) {
     #hero-graphic {
         min-height: 40vh;
-        padding: 40px 4px 30px 4px;
+        padding: 40px 10px 30px 10px;
     }
     .hero-text {
         font-size: 2.1rem;
         height: 2.1rem;
         margin-bottom: 10px;
+        padding: 0;
     }
     .hero-subtitle {
         font-size: 1rem;
-        padding: 0 4px;
-        margin-bottom: 12px;
+        padding: 0;
+        margin: 0 auto 12px;
+        max-width: 90%;
     }
     #about {
         padding: 30px 4px;
