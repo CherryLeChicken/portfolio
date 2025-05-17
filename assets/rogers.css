@@ -46,7 +46,7 @@ h3 {
 }
 
 p {
-    color: #c6d4da;
+    color: white;
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -298,3 +298,48 @@ ol li:hover {
     cursor: pointer;
 }
 
+/*key findings*/
+.key-findings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.finding {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.finding:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(249, 33, 33, 0.2);
+}
+
+.finding h4 {
+    color: #c81c30;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.finding p {
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 16px;
+}
