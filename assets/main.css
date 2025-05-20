@@ -112,7 +112,7 @@ section.footer-section {
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 100px;
+    padding: 20px 40px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -523,10 +523,33 @@ section.footer-section {
 
 @media (max-width: 600px) {
     .footer-info {
-        padding: 20px 10px;
-        margin: 0 auto;
-        align-items: center;
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .footer-info p {
+        font-size: 1rem;
+        flex-direction: row;
         text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .copy-btn {
+        margin: 8px 0 0 0;
+    }
+
+    .footer-info .external-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .footer-info .external-link i {
+        opacity: 1;
+        transform: none;
+        margin: 0;
     }
 }
 
