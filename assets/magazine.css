@@ -248,25 +248,37 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(208, 35, 41, 0.2);
 }
 
-.achievement-badge {
-    background: rgba(208, 35, 41, 0.1);
-    border: 1px solid #d02329;
-    border-radius: 50px;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.summary-grid::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(208, 35, 41, 0.3), transparent);
+}
+
+.summary-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(208, 35, 41, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.achievement-badge::before {
+.summary-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -278,45 +290,32 @@ img {
     transition: transform 0.6s ease;
 }
 
-.achievement-badge:hover::before {
-    transform: translateX(100%);
-}
-
-.achievement-badge:hover {
+.summary-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px #d02329;
+    box-shadow: 0 5px 15px rgba(208, 35, 41, 0.2);
     border-color: #d02329;
 }
 
-.badge-icon {
-    font-size: 20px;
-    color: #d02329;
+.summary-item:hover::before {
+    transform: translateX(100%);
 }
 
-.badge-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.badge-title {
-    font-size: 14px;
+.summary-item h4 {
     color: #d02329;
+    margin: 0 0 8px 0;
+    font-size: 16px;
     font-weight: 600;
 }
 
-.badge-value {
-    font-size: 18px;
-    font-weight: 700;
-    color: #d02329;
-    line-height: 1.2;
+.summary-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #c6d4da;
+    line-height: 1.4;
 }
 
 @media (max-width: 768px) {
-    .achievement-badges {
-        justify-content: center;
-    }
-    
-    .achievement-badge {
-        padding: 10px 15px;
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
