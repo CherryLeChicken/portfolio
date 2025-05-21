@@ -61,60 +61,62 @@
         </div>
         <div class="project-section" id="case-studies">
             <h4>Case Studies</h4>
-            <div class="image-container-wrapper">
+            <div class="carousel-wrapper">
                 <button class="section-navigation prev" aria-label="Previous items">&lt;</button>
-                <div class="image-container">
-                    <div class="image-item">
-                        <a href="bananasplit.html">
-                            <img src="./images/bananasplit.png" alt="Banana Split">
-                            <div class="tags">
-                                <span class="tag ui">UI/UX</span>
-                                <span class="tag figma">Figma</span>
-                            </div>
-                            <div class="overlay">
-                                <h3>Banana Split</h3>
-                                <p>Designed a grocery splitting application for university students.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="image-item">
-                        <a href="begym.html">
-                            <img src="./images/begym.png" alt="Begym ">
-                            <div class="tags">
-                                <span class="tag ui">UI/UX</span>
-                                <span class="tag figma">Figma</span>
-                            </div>
-                            <div class="overlay">
-                                <h3>BeGym</h3>
-                                <p>Designed a beginner-friendly fitness app.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="image-item">
-                        <a href="capsule.html">
-                            <img src="./images/capsulesquare.png" alt="Capsule" class="fit-width">
-                            <div class="tags">
-                                <span class="tag ui">UI/UX</span>
-                                <span class="tag figma">Figma</span>
-                            </div>
-                            <div class="overlay">
-                                <h3>Capsule</h3>
-                                <p>Designed a tool that reimagines remote work during Mosaic 2025.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="image-item">
-                        <a href="capsule.html">
-                            <img src="./images/capsulesquare.png" alt="Capsule" class="fit-width">
-                            <div class="tags">
-                                <span class="tag ui">UI/UX</span>
-                                <span class="tag figma">Figma</span>
-                            </div>
-                            <div class="overlay">
-                                <h3>Capsule</h3>
-                                <p>Designed a tool that reimagines remote work during Mosaic 2025.</p>
-                            </div>
-                        </a>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <div class="image-item">
+                            <a href="bananasplit.html">
+                                <img src="./images/bananasplit.png" alt="Banana Split">
+                                <div class="tags">
+                                    <span class="tag ui">UI/UX</span>
+                                    <span class="tag figma">Figma</span>
+                                </div>
+                                <div class="overlay">
+                                    <h3>Banana Split</h3>
+                                    <p>Designed a grocery splitting application for university students.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="image-item">
+                            <a href="begym.html">
+                                <img src="./images/begym.png" alt="Begym ">
+                                <div class="tags">
+                                    <span class="tag ui">UI/UX</span>
+                                    <span class="tag figma">Figma</span>
+                                </div>
+                                <div class="overlay">
+                                    <h3>BeGym</h3>
+                                    <p>Designed a beginner-friendly fitness app.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="image-item">
+                            <a href="capsule.html">
+                                <img src="./images/capsulesquare.png" alt="Capsule" class="fit-width">
+                                <div class="tags">
+                                    <span class="tag ui">UI/UX</span>
+                                    <span class="tag figma">Figma</span>
+                                </div>
+                                <div class="overlay">
+                                    <h3>Capsule</h3>
+                                    <p>Designed a tool that reimagines remote work during Mosaic 2025.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="image-item">
+                            <a href="urbanecho.html">
+                                <img src="./images/urbanecho.png" alt="Urban Echo" class="fit-width">
+                                <div class="tags">
+                                    <span class="tag ui">UI/UX</span>
+                                    <span class="tag figma">Figma</span>
+                                </div>
+                                <div class="overlay">
+                                    <h3>Urban Echo</h3>
+                                    <p>Designed a sustainable fashion app for eco-conscious consumers.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <button class="section-navigation next" aria-label="Next items">&gt;</button>
@@ -197,26 +199,23 @@
             const sections = document.querySelectorAll('.project-section');
             
             sections.forEach(section => {
-                const container = section.querySelector('.image-container');
+                const container = section.querySelector('.carousel-track-container');
+                const track = section.querySelector('.carousel-track');
                 const prevBtn = section.querySelector('.section-navigation.prev');
                 const nextBtn = section.querySelector('.section-navigation.next');
                 
-                if (!container || !prevBtn || !nextBtn) return;
+                if (!container || !track || !prevBtn || !nextBtn) return;
                 
-                const items = container.querySelectorAll('.image-item');
+                const items = track.querySelectorAll('.image-item');
                 if (items.length <= 3) {
-                    prevBtn.classList.add('hidden');
-                    nextBtn.classList.add('hidden');
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
                     return;
                 }
                 
                 let currentIndex = 0;
                 const itemsPerView = 3;
                 const maxIndex = items.length - itemsPerView;
-                let isDragging = false;
-                let startPos = 0;
-                let currentTranslate = 0;
-                let prevTranslate = 0;
                 
                 function updateNavigation() {
                     prevBtn.style.display = currentIndex > 0 ? 'flex' : 'none';
@@ -224,69 +223,10 @@
                 }
                 
                 function scrollToIndex(index) {
-                    const itemWidth = items[0].offsetWidth + 20; // Include gap
-                    container.style.transform = `translateX(-${index * itemWidth}px)`;
+                    const offset = -index * (100 / itemsPerView);
+                    track.style.transform = `translateX(${offset}%)`;
                     currentIndex = index;
-                    currentTranslate = -index * itemWidth;
-                    prevTranslate = currentTranslate;
                     updateNavigation();
-                }
-                
-                // Mouse events
-                container.addEventListener('mousedown', dragStart);
-                container.addEventListener('mousemove', drag);
-                container.addEventListener('mouseup', dragEnd);
-                container.addEventListener('mouseleave', dragEnd);
-                
-                // Touch events
-                container.addEventListener('touchstart', dragStart);
-                container.addEventListener('touchmove', drag);
-                container.addEventListener('touchend', dragEnd);
-                
-                function dragStart(e) {
-                    isDragging = true;
-                    startPos = getPositionX(e);
-                    container.style.cursor = 'grabbing';
-                    container.style.transition = 'none';
-                }
-                
-                function drag(e) {
-                    if (!isDragging) return;
-                    e.preventDefault();
-                    const currentPosition = getPositionX(e);
-                    const diff = currentPosition - startPos;
-                    currentTranslate = prevTranslate + diff;
-                    
-                    // Add boundaries
-                    const maxTranslate = 0;
-                    const minTranslate = -(items.length - itemsPerView) * (items[0].offsetWidth + 20);
-                    currentTranslate = Math.max(Math.min(currentTranslate, maxTranslate), minTranslate);
-                    
-                    container.style.transform = `translateX(${currentTranslate}px)`;
-                }
-                
-                function dragEnd() {
-                    isDragging = false;
-                    container.style.cursor = 'grab';
-                    container.style.transition = 'transform 0.3s ease';
-                    
-                    const itemWidth = items[0].offsetWidth + 20;
-                    const movedBy = currentTranslate - prevTranslate;
-                    
-                    // Snap to nearest item
-                    if (Math.abs(movedBy) > itemWidth / 3) {
-                        if (movedBy < 0 && currentIndex < maxIndex) {
-                            currentIndex++;
-                        } else if (movedBy > 0 && currentIndex > 0) {
-                            currentIndex--;
-                        }
-                    }
-                    
-                    scrollToIndex(currentIndex);
-                }
-                
-                function getPositionX(e) {
-                    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
                 }
                 
                 prevBtn.addEventListener('click', () => {
@@ -303,9 +243,10 @@
                 
                 // Initialize
                 updateNavigation();
-                container.style.transition = 'transform 0.3s ease';
+                track.style.transition = 'transform 0.3s ease';
             });
         });
     </script>
+      
 </body>
 </html>

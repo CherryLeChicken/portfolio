@@ -21,35 +21,35 @@
     overflow: hidden;
 }
 
-/* Add new class for containers with navigation */
-.image-container-wrapper .image-container {
+.carousel-wrapper {
     display: flex;
-    grid-template-columns: none;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
     gap: 20px;
-    transition: transform 0.3s ease;
-    cursor: grab;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-.image-container-wrapper .image-container:active {
-    cursor: grabbing;
-}
-
-.image-container-wrapper .image-item {
-    flex: 0 0 calc(33.333% - 14px);
-    min-width: calc(33.333% - 14px);
 }
 
 .image-item {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: calc(33.333% - 14px);
     position: relative;
-    width: 100%;
     aspect-ratio: 1;
-    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .image-item img {
@@ -66,7 +66,6 @@
 .image-item:hover img {
     transform: scale(1.1);
 }
-
 
 .image-item:hover .overlay {
     opacity: 1;
@@ -126,9 +125,7 @@
     border: 2px solid black;
     border-radius: 12px;
     background-color: black;
-
 }
-
 
 /* Tag Colors */
 /* roblox studio */
@@ -211,29 +208,47 @@
         width: 100%;
         aspect-ratio: 1;
         margin: 0 auto;
+        opacity: 1;
+        visibility: visible;
     }
 
     .project-section {
-        padding: 18px 0 12px 0;
-        margin: 48px 0 0 0;
+        padding: 18px 6px 12px 6px;
         max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 48px auto 0;
     }
 
     .project-section h4 {
-        padding-left: 0;
+        font-size: 1.3rem;
+        padding-left: 10px;
         text-align: center;
-        width: 100%;
     }
 
     .section-navigation {
         display: none !important;
     }
 
-    .section-navigation.prev,
-    .section-navigation.next {
-        display: none !important;
+    .carousel-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .carousel-track-container {
+        overflow: visible;
+    }
+
+    .carousel-track {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: none !important;
+    }
+
+    .image-item {
+        flex: 0 0 100%;
+        min-width: 100%;
+        aspect-ratio: 1;
+        margin: 0 auto;
     }
 }
 
@@ -263,9 +278,6 @@
 }
 
 @media (max-width: 768px) {
-    .project-section {
-        padding: 18px 6px 12px 6px;
-    }
     .project-section h3 {
         font-size: 1.3rem;
         padding-left: 10px;
@@ -319,10 +331,4 @@
 
 .section-navigation.hidden {
     display: none;
-}
-
-.image-container-wrapper {
-    position: relative;
-    overflow: hidden;
-    padding: 0;
 }
