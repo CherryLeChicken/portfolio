@@ -1,5 +1,5 @@
 body {
-    color: #c6d4da;
+    color: #fff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -152,7 +152,7 @@ p {
 
 .finding p {
     margin: 0;
-    color: #c6d4da;
+    color: #fff;
     line-height: 1.6;
     font-size: 16px;
 }
@@ -218,7 +218,7 @@ p {
 
 .summary-item p {
     margin: 0;
-    color: #c6d4da;
+    color: #fff;
     font-size: 14px;
     line-height: 1.4;
     opacity: 0.9;
@@ -329,7 +329,7 @@ ul li:hover {
 .usability-table td {
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: #c6d4da;
+    color: #fff;
 }
 
 .usability-table tr:hover {
@@ -636,7 +636,7 @@ article {
     position: relative;
     z-index: 2;
     text-decoration: none;
-    color: #c6d4da;
+    color: #fff;
     box-sizing: border-box;
     transition: color 0.3s ease;
 }

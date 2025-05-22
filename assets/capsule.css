@@ -1,5 +1,5 @@
 body {
-    color: #c6d4da;
+    color: #fff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -46,7 +46,7 @@ h3 {
 }
 
 p {
-    color: #c6d4da;
+    color: #fff;
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -136,8 +136,6 @@ ul li:hover {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-
-
 @media (max-width: 768px) {
     section {
         margin: 20px;
@@ -177,7 +175,6 @@ ul li:hover {
         height: 300px;
     }
 }
-
 
 /* Image Gallery */
 .gallery {
@@ -295,7 +292,7 @@ ul li:hover {
 
 .summary-item p {
     margin: 0;
-    color: #c6d4da;
+    color: #fff;
     font-size: 14px;
     line-height: 1.4;
     opacity: 0.9;
@@ -305,5 +302,12 @@ ul li:hover {
     .summary-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.finding p {
+    margin: 0;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
 }
 

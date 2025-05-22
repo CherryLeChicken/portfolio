@@ -1,5 +1,5 @@
 body {
-  color: #c6d4da;
+  color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -46,7 +46,7 @@ h3 {
 }
 
 p {
-  color: #c6d4da;
+  color: #fff;
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -371,9 +371,10 @@ img {
 
 .summary-item p {
     margin: 0;
+    color: #fff;
     font-size: 14px;
-    color: #c6d4da;
     line-height: 1.4;
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -448,4 +449,11 @@ img {
     .prototype-item img {
         max-width: 100%;
     }
+}
+
+.finding p {
+    margin: 0;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
 }

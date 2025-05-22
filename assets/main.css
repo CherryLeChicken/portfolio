@@ -20,12 +20,14 @@ body {
 
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
-    color: white;
+    color: #fff;
     margin: 0;
     padding-bottom: 100px; 
     position: relative;
     min-height: 100%;
     padding-top: 80px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
 }
 
 .button{
@@ -128,7 +130,7 @@ section.footer-section {
 
 .footer-info p {
     font-size: 1.1rem;
-    color: #c6d4da;
+    color: #fff;
     margin: 0;
     display: flex;
     align-items: center;
@@ -570,5 +572,12 @@ a {
 .external-link:hover i {
     opacity: 1;
     transform: translateX(0);
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
