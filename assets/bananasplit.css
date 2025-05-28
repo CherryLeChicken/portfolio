@@ -226,6 +226,7 @@ ul li:hover {
 }
 
 .usability-table td {
+    text-align: left;
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -234,7 +235,24 @@ ul li:hover {
 .usability-table tr:hover {
     background: rgba(255, 255, 255, 0.05);
 }
+#center-text {
+    text-align: center;
+}
+.usability-table td img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(249, 155, 33, 0.2);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
 
+.usability-table td img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(249, 155, 33, 0.3);
+}
 
 @media (max-width: 768px) {
     section {
