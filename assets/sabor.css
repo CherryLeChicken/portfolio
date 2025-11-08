@@ -1,44 +1,41 @@
 body {
-    color: #fff;
+    color: #000;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 section {
     max-width: 900px;
     margin: 40px auto;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 h2, h3 {
-    color: white;
+    color: #000;
     margin-bottom: 15px;
 }
 
 h2 {
-    color: #c6d4da;
+    color: #000;
     font-size: 32px;
-    background: linear-gradient(45deg, #c6d4da, #9fe7e6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(159, 231, 230, 0.3);
+    text-shadow: none;
 }
 
 h3 {
     font-size: 24px;
-    color: #9fe7e6;
+    color: #000;
 }
 
 p {
-    color: #fff;
+    color: #000;
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -61,7 +58,7 @@ p {
 }
 
 .achievement-title {
-    color: #9fe7e6;
+    color: #000;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -70,7 +67,7 @@ p {
 .achievement-value {
     font-size: 24px;
     font-weight: 700;
-    color: #c6d4da;
+    color: #000;
     margin: 10px 0;
 }
 
@@ -117,19 +114,19 @@ p {
 .stat-value {
     font-size: 28px;
     font-weight: 700;
-    color: #c6d4da;
+    color: #000;
     margin-bottom: 5px;
 }
 
 .stat-label {
-    color: #9fe7e6;
+    color: #000;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 ul {
-    color: white;
+    color: #000;
 }
 
 ul li {
@@ -137,10 +134,11 @@ ul li {
     text-align: left;
     position: relative;
     transition: all 0.3s ease;
+    color: #000;
 }
 
 ul li::before {
-    color: #f8f8f8;
+    color: #000;
     position: absolute;
     left: 0;
     font-size: 20px;
@@ -148,7 +146,7 @@ ul li::before {
 
 ul li:hover {
     transform: translateX(5px);
-    color: #9fe7e6;
+    color: #000;
 }
 
 
@@ -164,7 +162,7 @@ img {
 
 img:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(159, 231, 230, 0.2);
+    box-shadow: 0 12px 40px rgba(208, 35, 41, 0.2);
 }
 
 .project {
@@ -174,12 +172,12 @@ img:hover {
     margin-bottom: 50px;
     padding: 20px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
 
 .project:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     transform: translateY(-5px);
 }
 
@@ -215,7 +213,7 @@ img:hover {
     bottom: -6px;
     width: 0;
     height: 3px;
-    background: linear-gradient(45deg, #00e6fe, #9fe7e6);
+    background: linear-gradient(45deg, #ff52d4, #fca1e5);
     border-radius: 2px;
     transition: width 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -227,13 +225,14 @@ img:hover {
 
 /* Remove underline effect from the <a> */
 .project-text h2 a {
+    color: #ff52d4;
     text-decoration: none;
 }
 
 .button {
     display: inline-block;
     padding: 12px 24px;
-    background: linear-gradient(45deg, #c6d4da, #093456);
+    background: linear-gradient(45deg, #ff52d4, #fca1e5);
     color: #000;
     text-decoration: none;
     border-radius: 8px;
@@ -251,12 +250,12 @@ img:hover {
 }
 
 p a {
-    color: #c6d4da;
+    color: #000;
     text-decoration: none;
 }
 
 p a:hover {
-    color:#9fe7e6;
+    color: #000;
 }
 
 /* Achievement Badges */
@@ -266,12 +265,12 @@ p a:hover {
     gap: 15px;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid rgba(159, 231, 230, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .achievement-badge {
-    background: rgba(159, 231, 230, 0.1);
-    border: 1px solid rgba(159, 231, 230, 0.2);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 50px;
     padding: 12px 20px;
     display: flex;
@@ -289,7 +288,7 @@ p a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(159, 231, 230, 0.1), transparent);
+    background: linear-gradient(45deg, transparent, rgba(0, 0, 0, 0.05), transparent);
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
@@ -300,13 +299,14 @@ p a:hover {
 
 .achievement-badge:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(159, 231, 230, 0.2);
-    border-color: rgba(159, 231, 230, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.4);
+    background: #f5f5f5;
 }
 
 .badge-icon {
     font-size: 20px;
-    color: #9fe7e6;
+    color: #000;
 }
 
 .badge-content {
@@ -316,14 +316,14 @@ p a:hover {
 
 .badge-title {
     font-size: 14px;
-    color: #9fe7e6;
+    color: #000;
     font-weight: 600;
 }
 
 .badge-value {
     font-size: 18px;
     font-weight: 700;
-    color: #c6d4da;
+    color: #000;
     line-height: 1.2;
 }
 
@@ -429,21 +429,19 @@ p a:hover {
 .project-header h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, #00e6fe, #4c5362);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(0, 230, 254, 0.3);
+    color: #000;
+    text-shadow: none;
 }
 
 .project-header h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #00e6fe;
+    color: #000;
 }
 
 .project-header p {
     font-size: 18px;
-    color: #c6d4da;
+    color: #000;
     margin-bottom: 20px;
 }
 
@@ -451,10 +449,10 @@ p a:hover {
     width: 100%;
     max-width: none;
     margin: 40px 0 30px 0;
-    background: rgba(159,231,230,0.07);
+    background: rgba(159,231,230,0.1);
     border-radius: 16px;
     padding: 24px 0 32px 0;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.05);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -465,7 +463,7 @@ p a:hover {
     padding-left: 20px;
 }
 .timeline-title {
-    color: #00e6fe;
+    color: #000;
     font-size: 1.3rem;
     margin-bottom: 18px;
     letter-spacing: 1px;
@@ -485,7 +483,7 @@ p a:hover {
     margin: 0 auto;
     appearance: none;
     height: 8px;
-    background: linear-gradient(90deg, #00e6fe 0%, #c6d4da 100%);
+    background: linear-gradient(45deg, #ff52d4, #fca1e5);
     border-radius: 4px;
     outline: none;
     transition: background 0.3s;
@@ -496,9 +494,9 @@ p a:hover {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #00e6fe;
+    background: #ff52d4;
     border: 4px solid #fff;
-    box-shadow: 0 2px 12px rgba(0,230,254,0.18);
+    box-shadow: 0 2px 12px rgba(254, 0, 241, 0.3);
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -506,9 +504,9 @@ p a:hover {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #00e6fe;
+    background: #ff52d4;
     border: 4px solid #fff;
-    box-shadow: 0 2px 12px rgba(0,230,254,0.18);
+    box-shadow: 0 2px 12px rgba(254, 0, 241, 0.3);
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -516,16 +514,16 @@ p a:hover {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #00e6fe;
+    background: #ff52d4;
     border: 4px solid #fff;
-    box-shadow: 0 2px 12px rgba(0,230,254,0.18);
+    box-shadow: 0 2px 12px rgba(254, 0, 241, 0.3);
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .timeline-slider:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #00e6fe;
+    box-shadow: 0 0 0 2px #ff52d4;
 }
 
 .timeline-labels {
@@ -541,7 +539,7 @@ p a:hover {
     position: absolute;
     transform: translateX(-50%);
     font-size: 1.1rem;
-    color: #9fe7e6;
+    color: #000;
     font-weight: 600;
     letter-spacing: 0.5px;
     width: max-content;
@@ -568,9 +566,9 @@ p a:hover {
 }
 
 .timeline-arrow {
-    background: rgba(0,230,254,0.12);
+    background: rgba(254, 0, 241, 0.3);
     border: none;
-    color: #00e6fe;
+    color: #ff52d4;
     font-size: 2.2rem;
     border-radius: 50%;
     width: 48px;
@@ -581,11 +579,11 @@ p a:hover {
     cursor: pointer;
     margin: 0 12px;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,230,254,0.08);
+    box-shadow: 0 2px 8px rgba(254, 0, 241, 0.3);
     z-index: 2;
 }
 .timeline-arrow:hover, .timeline-arrow:focus {
-    background: #00e6fe;
+    background: #ff52d4;
     color: #fff;
     outline: none;
 }
@@ -603,12 +601,17 @@ p a:hover {
     max-width: 600px;
     min-width: 320px;
     border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(0,230,254,0.13);
+    box-shadow: none;
     background: #fff;
     margin: 0 auto;
     display: block;
-    transition: opacity 0.5s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.3s ease;
     opacity: 1;
+    transform: scale(1);
+}
+
+.timeline-image:hover {
+    transform: scale(1.05);
 }
 
 .timeline-image.fade {
@@ -653,7 +656,7 @@ p a:hover {
 }
 
 .summary-item {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.03);
     padding: 15px;
     border-radius: 12px;
     border: 1px solid rgba(159, 231, 230, 0.1);
@@ -675,7 +678,7 @@ p a:hover {
 }
 
 .summary-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     transform: translateY(-2px);
     border-color: rgba(159, 231, 230, 0.3);
     box-shadow: 0 4px 15px rgba(159, 231, 230, 0.1);
@@ -686,7 +689,7 @@ p a:hover {
 }
 
 .summary-item h4 {
-    color: #9fe7e6;
+    color: #000;
     margin: 0 0 8px 0;
     font-size: 14px;
     font-weight: 600;
@@ -696,7 +699,7 @@ p a:hover {
 
 .summary-item p {
     margin: 0;
-    color: #fff;
+    color: #000;
     font-size: 14px;
     line-height: 1.4;
     opacity: 0.9;
@@ -710,7 +713,7 @@ p a:hover {
 
 .finding p {
     margin: 0;
-    color: #fff;
+    color: #000;
     line-height: 1.6;
     font-size: 16px;
 }

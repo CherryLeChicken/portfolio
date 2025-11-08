@@ -2,12 +2,13 @@
 .image-gallery {
     padding: 40px;
     text-align: center;
+    background: #ffffff;
 }
 
 .image-gallery h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    color: white;
+    color: #333;
 }
 
 .image-container {
@@ -34,6 +35,7 @@
     overflow: hidden;
     flex: 1;
     position: relative;
+    padding-bottom: 10px;
 }
 
 .carousel-track {
@@ -77,7 +79,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.9);
     opacity: 0;
     display: flex;
     flex-direction: column; 
@@ -90,14 +92,14 @@
 .overlay h3 {
     font-size: 20px;
     margin-bottom: 5px;
-    color: white;
+    color: #333;
 }
 
 .overlay p {
     padding: 10px;
     font-size: 14px;
     overflow: hidden;
-    color: white;
+    color: #333;
 }
 
 /* tags */
@@ -116,15 +118,15 @@
     padding: 3px 8px;
     border-radius: 12px;
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #333;
     backdrop-filter: blur(4px);
 }
 
 .image-item.border {
-    border: 2px solid black;
+    border: 2px solid #ddd;
     border-radius: 12px;
-    background-color: black;
+    background-color: #fff;
 }
 
 /* Tag Colors */
@@ -213,7 +215,7 @@
     }
 
     .project-section {
-        padding: 18px 6px 12px 6px;
+        padding: 18px 6px 30px 6px;
         max-width: 400px;
         margin: 48px auto 0;
     }
@@ -255,14 +257,15 @@
 .project-section {
     position: relative;
     margin: 48px 0 0 0;
-    padding: 36px 24px 24px 24px;
-    background: rgba(114, 114, 114, 0.07);
+    padding: 36px 24px 40px 24px;
+    background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(52, 24, 24, 0.07);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .project-section h4 {
@@ -271,9 +274,8 @@
     margin-bottom: 24px;
     letter-spacing: 1px;
     font-weight: 700;
-    text-shadow: 0 2px 12px rgba(16,109,59,0.08);
+    text-shadow: 0 2px 12px rgba(255, 82, 212, 0.1);
     padding-left: 18px;
-    background: linear-gradient(90deg, #6b335e 0%, #390029 100%);
     border-radius: 8px;
 }
 
@@ -303,10 +305,10 @@
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: rgba(0, 0, 0, 0.6);
-    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
-    color: white;
+    color: #333;
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -314,11 +316,13 @@
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-navigation:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 1);
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .section-navigation.prev {
@@ -334,23 +338,23 @@
 }
 
 body {
-    color: #fff;
+    color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+    background: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 p {
-    color: #fff;
+    color: #333;
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
 .overlay p {
-    color: #fff;
+    color: #333;
     font-size: 14px;
     line-height: 1.4;
     margin: 0;
