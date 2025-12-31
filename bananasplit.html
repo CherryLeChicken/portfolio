@@ -23,7 +23,7 @@
         <div class="project">
             <img src="./images/bananasplit.png" alt="Banana Split App">
             <div class="project-text">
-                <h1>Banana Split</h1>
+                <h2>Banana Split</h2>
                 <p>A collaborative grocery shopping app designed to help university students save money and reduce food waste by sharing bulk purchases.</p>
                 
                 <div class="achievement-badges">
@@ -88,7 +88,7 @@
                     <li>Limited storage space in student accommodations</li>
                 </ul>
                 <p>These insights helped us define key themes which helped shape our problem statement.</p>
-                <h2>Key Themes</h2>
+                <h3>Key Themes</h3>
                 <div class="key-findings">
                     <div class="finding">
                         <h4>Shopping Preferences</h4>
@@ -152,45 +152,77 @@
             </div>
         </div> 
 
-        <div class="table-container">
-            <table class="usability-table">
-                <h2>Feedback & Iterations</h2>
-                <thead>
-                    <tr>
-                        <th>Issue</th>
-                        <th>Solution</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong>UI Navigation</strong>
+        <div class="feedback-container">
+            <h3 class="table-title">Feedback & Iterations</h3>
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <div class="feedback-info">
+                        <div class="feedback-issue">
+                            <h4>UI Navigation</h4>
                             <ul>
                                 <li>Back button visibility</li>
                                 <li>Font size readability</li>
                                 <li>Chat interface contrast</li>
                             </ul>
-                        </td>
-                        <td id="center-text">
-                            <img src="./images/bs-back.png" alt="Back button">Improved button visibility and text contrast</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Payment Confirmation</strong>
-                        <p>Essential for user trust and security</p></td>
-                        <td id="center-text"><img src="./images/bs-payment.png" alt="Payment confirmation">Added clear confirmation dialogs</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Notification System</strong>
-                        <p>Important for user engagement</p></td>
-                        <td id="center-text"><img src="./images/bs-notification.png" alt="Notification">Enhanced visual hierarchy and urgency indicators</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Search Functionality</strong>
-                        <p>Key for efficient item addition</p></td>
-                        <td id="center-text"><img src="./images/bs-search.png" alt="Search bar">Improved search button placement and visibility</td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                        <div class="feedback-solution">
+                            <strong>Solution:</strong>
+                            <p>Improved button visibility and text contrast for better accessibility.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-visual">
+                        <img src="./images/bs-back.png" alt="Back button improvement" class="gallery-img">
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-info">
+                        <div class="feedback-issue">
+                            <h4>Payment Confirmation</h4>
+                            <p>Essential for user trust and security during transactions.</p>
+                        </div>
+                        <div class="feedback-solution">
+                            <strong>Solution:</strong>
+                            <p>Added clear, descriptive confirmation dialogs before any financial action.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-visual">
+                        <img src="./images/bs-payment.png" alt="Payment confirmation" class="gallery-img">
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-info">
+                        <div class="feedback-issue">
+                            <h4>Notification System</h4>
+                            <p>Critical for maintaining high user engagement and real-time coordination.</p>
+                        </div>
+                        <div class="feedback-solution">
+                            <strong>Solution:</strong>
+                            <p>Enhanced visual hierarchy and added urgency indicators for time-sensitive split requests.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-visual">
+                        <img src="./images/bs-notification.png" alt="Notification improvement" class="gallery-img">
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-info">
+                        <div class="feedback-issue">
+                            <h4>Search Functionality</h4>
+                            <p>Key for efficient item discovery and addition to shared lists.</p>
+                        </div>
+                        <div class="feedback-solution">
+                            <strong>Solution:</strong>
+                            <p>Improved search bar placement and added clear filter visibility.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-visual">
+                        <img src="./images/bs-search.png" alt="Search functionality improvement" class="gallery-img">
+                    </div>
+                </div>
+            </div>
         </div>
             
 
@@ -198,35 +230,37 @@
 
         <section class="gallery">
             <h2>UI Gallery</h2>
-            <div class="gallery-container">
-                <img src="./images/Home Page.png" alt="Home page" class="gallery-img">
-                <img src="./images/Lists.png" alt="Grocery lists" class="gallery-img">
-                <img src="./images/PublicGroceryList.png" alt="Public grocery list" class="gallery-img">
-                <img src="./images/ListSettings.png" alt="List settings" class="gallery-img">
-                <img src="./images/SplitItem.png" alt="Split item screen" class="gallery-img">
-                <img src="./images/PayPal.png" alt="Paypal page" class="gallery-img">
-                <img src="./images/PaymentConfirm.png" alt="Payment confirmation" class="gallery-img">
-                <img src="./images/Friends.png" alt="Friends" class="gallery-img">
-                <img src="./images/MessagesList.png" alt="Messages" class="gallery-img">
-                <img src="./images/PaymentPage.png" alt="Payment page" class="gallery-img">
-                <img src="./images/Profile.png" alt="Profile " class="gallery-img">
+            <div class="gallery-wrapper">
+                <button class="gallery-nav prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-container" id="galleryContainer">
+                    <img src="./images/Home Page.png" alt="Home page" class="gallery-img">
+                    <img src="./images/Lists.png" alt="Grocery lists" class="gallery-img">
+                    <img src="./images/PublicGroceryList.png" alt="Public grocery list" class="gallery-img">
+                    <img src="./images/ListSettings.png" alt="List settings" class="gallery-img">
+                    <img src="./images/SplitItem.png" alt="Split item screen" class="gallery-img">
+                    <img src="./images/PayPal.png" alt="Paypal page" class="gallery-img">
+                    <img src="./images/PaymentConfirm.png" alt="Payment confirmation" class="gallery-img">
+                    <img src="./images/Friends.png" alt="Friends" class="gallery-img">
+                    <img src="./images/MessagesList.png" alt="Messages" class="gallery-img">
+                    <img src="./images/PaymentPage.png" alt="Payment page" class="gallery-img">
+                    <img src="./images/Profile.png" alt="Profile " class="gallery-img">
+                </div>
+                <button class="gallery-nav next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
             </div>
+            <div class="gallery-pagination" id="galleryPagination"></div>
         
-            <div id="lightbox">
-                <span class="close">&times;</span>
-                <img id="lightbox-img">
-            </div>
+            
         </section>
 
         <div class="project">
             <div class="project-text">
-                <h2>Contributions</h2>
+                <h3>Contributions</h3>
                 <p>My main focus was on creating an intuitive experience that made cost-sharing feel seamless and intuitive. I did my own user research and testing through interviews and usability testing sessions. I also designed the profile and payment pages, and  helped make iterations based on user feedback on other UI screens. </p>
             </div>
         </div>
         <div class="project">
             <div class="project-text">
-                <h2>Reflection</h2>
+                <h3>Reflection</h3>
                 <p>Through this project, I gained a lot of experience in developing user-centered solutions, and simultaneously sharpened my UX research and UI design skills. More importantly, it taught me how to build solutions that go beyond personal experience and meet the needs of a broader audience. Listening to users at every step shaped a stronger, more relevant product.</p>
             </div>
         </div>
@@ -238,5 +272,61 @@
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/footer.js"></script>
     <script src="./scripts/gallery.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById('galleryContainer');
+            const prevBtn = document.getElementById('galleryPrev');
+            const nextBtn = document.getElementById('galleryNext');
+            const pagination = document.getElementById('galleryPagination');
+            const images = container.querySelectorAll('.gallery-img');
+            
+            // Create pagination dots
+            images.forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'gallery-dot' + (idx === 0 ? ' active' : '');
+                pagination.appendChild(dot);
+            });
+
+            const dots = pagination.querySelectorAll('.gallery-dot');
+
+            // Update active dot on scroll
+            container.addEventListener('scroll', () => {
+                const containerCenter = container.scrollLeft + (container.offsetWidth / 2);
+                let closestIdx = 0;
+                let minDistance = Infinity;
+
+                images.forEach((img, idx) => {
+                    const imgCenter = img.offsetLeft - container.offsetLeft + (img.offsetWidth / 2);
+                    const distance = Math.abs(containerCenter - imgCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestIdx = idx;
+                    }
+                });
+                
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === closestIdx);
+                });
+            });
+
+            // Dot clicking
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    const img = images[idx];
+                    const scrollAmount = img.offsetLeft - container.offsetLeft - (container.offsetWidth / 2) + (img.offsetWidth / 2);
+                    container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+                });
+            });
+
+            // Arrow navigation
+            prevBtn.addEventListener('click', () => {
+                container.scrollBy({ left: -container.offsetWidth / 2, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
