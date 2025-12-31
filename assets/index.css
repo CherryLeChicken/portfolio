@@ -64,6 +64,89 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Previously Area */
+#previously-area {
+    width: 100%;
+    margin-top: 40px; 
+    position: relative;
+    z-index: 10;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.previously-box {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 16px 20px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    box-sizing: border-box; 
+}
+
+.previously-box .prev-main-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.previously-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 82, 212, 0.1);
+    border-color: rgba(255, 82, 212, 0.2);
+}
+
+.previously-box i {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.previously-box span {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.previously-box .prev-date {
+    font-size: 0.75rem;
+    color: #ff52d4;
+    background: rgba(255, 82, 212, 0.05);
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #previously-area {
+        margin-top: 30px;
+    }
+    
+    .previously-box {
+        width: auto; /* Allow margins to work correctly */
+        padding: 15px 25px; /* Match #about's 25px horizontal padding */
+        margin: 0 15px; /* Match #about's horizontal margin */
+        flex-direction: column; /* Stack on mobile */
+        gap: 10px;
+        text-align: center;
+        border-radius: 16px; /* Match #about's 16px radius */
+    }
+
+    .previously-box .prev-main-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .previously-box span {
+        font-size: 0.85rem;
+    }
+}
+
 #hero-graphic::before {
     content: '';
     position: absolute;
@@ -210,6 +293,7 @@
     padding: 80px 20px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.95));
     color: #333;
+    width: 100%;
     max-width: 1000px;
     margin: 40px auto;
     border-radius: 24px;
@@ -217,8 +301,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center content horizontally */
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 #about:hover {
@@ -835,9 +921,15 @@
         height: 6px;
     }
     #about {
+        width: auto; /* Allow margins to work without overflow */
         padding: 60px 25px;
         margin: 40px 15px;
         border-radius: 16px;
+        overflow: hidden; /* Ensure gradient doesn't bleed */
+        position: relative;
+    }
+    #about::before {
+        border-radius: 16px; /* Match parent radius precisely */
     }
     .hero-logo {
         width: 80px;
@@ -996,6 +1088,13 @@
     }
     #about {
         padding: 40px 20px;
+        border-radius: 16px; /* Explicitly keep the smaller radius */
+    }
+    #about::before {
+        border-radius: 16px;
+    }
+    .previously-box {
+        padding: 15px 20px; /* Match #about's 20px padding at this size */
     }
     .hero-logo {
         width: 60px;
