@@ -134,13 +134,24 @@
 .portfolio-grid-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 40px 20px 80px;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+    justify-content: center; /* Centers projects even if there's only 1 or 2 */
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid-container {
+        padding: 20px 15px 60px;
+    }
+    
+    .projects-grid {
+        gap: 25px;
+    }
 }
 
 .project-card {
@@ -152,6 +163,10 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
     opacity: 1;
     transform: translateY(0);
+    flex: 1 1 350px; /* Fluid size: grow and shrink, starting at 350px */
+    max-width: 420px; /* Prevents them from getting too huge on MacBooks */
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card.is-animating {
@@ -249,19 +264,9 @@
 }
 
 /* Responsive Breaks */
-@media (max-width: 992px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    }
-}
-
 @media (max-width: 768px) {
     .portfolio-header h1 {
         font-size: 2.5rem;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
     }
     .card-image {
         height: 250px;
