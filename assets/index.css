@@ -41,15 +41,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background-image: 
         radial-gradient(circle at 50% 50%, rgba(255, 82, 212, 0.05) 0%, transparent 70%),
-        repeating-linear-gradient(
-            45deg,
-            rgba(255, 82, 212, 0.02) 0px,
-            rgba(255, 82, 212, 0.02) 1px,
-            transparent 1px,
-            transparent 10px
-        );
+        linear-gradient(rgba(255, 82, 212, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 82, 212, 0.08) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
     transform: translateZ(-0.5px) scale(1.5);
     z-index: 2;
     border-bottom-left-radius: 50% 60px;
@@ -210,6 +206,7 @@
     margin-bottom: 30px;
     background: linear-gradient(45deg, #ff52d4, #fca1e5);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 30px rgba(255, 82, 212, 0.3);
     position: relative;
@@ -233,7 +230,7 @@
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 30px;
-    color: #555;
+    color: #333;
     position: relative;
     padding: 0 20px;
 }
@@ -402,6 +399,7 @@
     margin: 0;
     background: linear-gradient(45deg, #ff52d4, #fca1e5);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: left;
 }
@@ -491,7 +489,7 @@
 }
 
 .project-info p {
-    color: #555;
+    color: #333;
     margin-bottom: 15px;
     line-height: 1.6;
     flex: 1;
@@ -671,7 +669,7 @@
 }
 
 .skill-item span {
-    color: #555;
+    color: #333;
     font-size: 1rem;
     font-weight: 500;
     display: flex;
@@ -736,18 +734,18 @@
    font-weight: 600;
 }
 
-.about-content img {
-    width: 80px;
+.hero-logo {
+    width: 100px;
     height: auto;
-    margin: -40px auto 5px;
+    margin: -50px auto 20px;
     filter: drop-shadow(0 0 20px rgba(255, 82, 212, 0.6));
     position: relative;
-    z-index: 1;
+    z-index: 5;
     display: block;
     transition: transform 1.2s ease;
 }
 
-.about-content img:hover {
+.hero-logo:hover {
     transform: rotate(360deg);
 }
 
@@ -781,10 +779,13 @@
         text-align: center;
     }
     #about {
-        padding: 60px 10px;
-        margin: 20px auto;
-        min-height: 600px;
+        padding: 60px 25px;
+        margin: 40px 15px;
         border-radius: 16px;
+    }
+    .hero-logo {
+        width: 80px;
+        margin: -40px auto 15px;
     }
     .about-content h2 {
         font-size: 2rem;
@@ -792,7 +793,7 @@
     }
     .about-content p {
         font-size: 1rem;
-        padding: 0 4px;
+        padding: 0;
         text-align: left;
     }
     .btn-group {
@@ -801,13 +802,13 @@
         align-items: center;
     }
     #skills {
-        padding: 40px 10px;
-        margin: 20px 0;
+        padding: 40px 20px;
+        margin: 20px 10px;
     }
     .skills-container {
         grid-template-columns: 1fr;
         gap: 24px;
-        padding: 0 4px;
+        padding: 0;
     }
     .skills-category {
         padding: 18px 8px;
@@ -854,7 +855,7 @@
         text-align: center;
     }
     #featured-projects {
-        padding: 30px 6px 30px 6px;
+        padding: 40px 20px;
         min-height: auto;
     }
     .section-header {
@@ -938,11 +939,14 @@
         max-width: 90%;
     }
     #about {
-        padding: 30px 4px;
-        min-height: 800px;
+        padding: 40px 20px;
+    }
+    .hero-logo {
+        width: 60px;
+        margin: -30px auto 10px;
     }
     #featured-projects {
-        padding: 16px 2px 16px 2px;
+        padding: 30px 20px;
         margin: 0;
     }
     .project-card {

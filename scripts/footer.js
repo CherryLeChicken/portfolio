@@ -7,18 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 footerContainer.innerHTML = data;
                 
-                // Add copy email functionality after footer is loaded
-                const copyBtn = document.querySelector('.copy-btn');
-                if (copyBtn) {
-                    copyBtn.addEventListener('click', function() {
-                        const email = 'c5ke@uwaterloo.ca';
-                        navigator.clipboard.writeText(email).then(() => {
-                            this.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                            setTimeout(() => {
-                                this.innerHTML = '<i class="fas fa-copy"></i> Copy Email';
-                            }, 2000);
-                        }).catch(err => {
-                            console.error('Failed to copy email: ', err);
+                // 1. Current Year
+                const yearSpan = document.getElementById('current-year');
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+
+                // 2. Back to Top Functionality
+                const backToTopBtn = document.getElementById('back-to-top');
+                if (backToTopBtn) {
+                    backToTopBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
                         });
                     });
                 }

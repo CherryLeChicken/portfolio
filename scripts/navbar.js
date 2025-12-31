@@ -1,55 +1,66 @@
-function toggleNav() {
-    var nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-}
+function initializeNavbar() {
+    const hamburger = document.querySelector('.hamburger');
+    const navRight = document.querySelector('.nav-right');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-// Add mobile dropdown functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-        
-        dropbtn.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) { // Only for mobile
-                // On mobile, just navigate to portfolio page
-                window.location.href = 'portfolio.html';
+    if (hamburger && navRight) {
+        // Remove existing listener to prevent doubles
+        const newHamburger = hamburger.cloneNode(true);
+        hamburger.parentNode.replaceChild(newHamburger, hamburger);
+
+        newHamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            newHamburger.classList.toggle('active');
+            navRight.classList.toggle('show');
+            document.body.style.overflow = navRight.classList.contains('show') ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navRight.classList.contains('show') && !navRight.contains(e.target) && !newHamburger.contains(e.target)) {
+                newHamburger.classList.remove('active');
+                navRight.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                const activeHamburger = document.querySelector('.hamburger');
+                if (activeHamburger) activeHamburger.classList.remove('active');
+                if (navRight) navRight.classList.remove('show');
+                document.body.style.overflow = 'auto';
             }
         });
     });
-});
+}
 
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.topnav');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+// Handle Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const topnav = document.querySelector('.topnav');
+    if (topnav) {
+        if (window.scrollY > 50) {
+            topnav.classList.add('scrolled');
+        } else {
+            topnav.classList.remove('scrolled');
+        }
     }
 });
 
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', initializeNavbar);
 
+// Re-initialize if navbar is loaded dynamically
 const navbarContainer = document.getElementById('navbar');
 if (navbarContainer) {
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
             if (mutation.addedNodes.length) {
                 initializeNavbar();
             }
         });
     });
-
     observer.observe(navbarContainer, { childList: true });
 }
-
-// Add click event listeners to all navbar links
-document.querySelectorAll('.nav-right a, .dropdown-content a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-            document.getElementById('navLinks').classList.remove('show');
-            document.querySelector('.hamburger').classList.remove('active');
-        }
-    });
-});

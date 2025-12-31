@@ -1,361 +1,282 @@
-/* Image Gallery */
-.image-gallery {
-    padding: 40px;
+/* Portfolio Header */
+.portfolio-header {
+    padding: 100px 20px 60px;
+    background: linear-gradient(135deg, rgba(255, 234, 248, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
     text-align: center;
-    background: #ffffff;
 }
 
-.image-gallery h2 {
-    font-size: 30px;
+.portfolio-header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
     margin-bottom: 20px;
-    color: #333;
+    background: linear-gradient(45deg, #ff52d4, #fca1e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.portfolio-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Filter Container */
+.filter-wrapper {
+    width: 100%;
+    margin: 30px auto 0;
     padding: 0 20px;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-.carousel-wrapper {
+.filter-container {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.carousel-track-container {
-    overflow: hidden;
-    flex: 1;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    gap: 20px;
-}
-
-.image-item {
-    flex: 0 0 calc(33.333% - 14px);
-    min-width: calc(33.333% - 14px);
-    position: relative;
-    aspect-ratio: 1;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.image-item img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.image-item img.fit-width {
-    object-fit: cover;
-}
-
-.image-item:hover img {
-    transform: scale(1.1);
-}
-
-.image-item:hover .overlay {
-    opacity: 1;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 0;
-    display: flex;
-    flex-direction: column; 
     justify-content: center;
-    align-items: center; 
-    text-align: center; 
-    transition: opacity 0.3s ease;
-}
-
-.overlay h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.overlay p {
-    padding: 10px;
-    font-size: 14px;
-    overflow: hidden;
-    color: #333;
-}
-
-/* tags */
-.tags {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    gap: 6px;
+    gap: 10px;
+    padding: 6px;
+    background: #fdf2f9;
+    border: 1px solid rgba(255, 82, 212, 0.15);
+    border-radius: 50px;
+    position: relative;
     flex-wrap: wrap;
-    z-index: 2;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .filter-wrapper {
+        padding: 0 10px;
+    }
+
+    .filter-container {
+        padding: 5px;
+        gap: 5px;
+        border-radius: 25px;
+        background: transparent;
+        border: none;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        background: #fdf2f9;
+        border: 1px solid rgba(255, 82, 212, 0.1);
+        margin: 2px;
+    }
+
+    .filter-btn:hover:not(.active) {
+        background: #fff;
+        border-color: rgba(255, 82, 212, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .filter-btn.active {
+        border-color: transparent;
+        background: transparent; /* Let the pill show through */
+    }
+
+    .filter-pill-bg {
+        box-shadow: 0 2px 8px rgba(255, 82, 212, 0.2);
+    }
+}
+
+.filter-pill-bg {
+    position: absolute;
+    background: #ff52d4;
+    border-radius: 40px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 0;
+    box-shadow: 0 4px 12px rgba(255, 82, 212, 0.2);
+    top: 6px;
+}
+
+@media (max-width: 768px) {
+    .filter-pill-bg {
+        top: 5px;
+    }
+}
+
+.filter-btn {
+    padding: 12px 26px;
+    border: none;
+    background: transparent;
+    color: #444;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.filter-btn:hover:not(.active) {
+    color: #ff52d4;
+    background: rgba(255, 82, 212, 0.05);
+}
+
+.filter-btn.active {
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .filter-btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Projects Grid */
+.portfolio-grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.is-animating {
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(255, 82, 212, 0.15);
+    border-color: rgba(255, 82, 212, 0.3);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Card Image Area */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: none;
+}
+
+.project-card:hover .card-image img {
+    transform: none;
+}
+
+.card-tag-floating {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ff52d4;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content Area */
+.card-content {
+    padding: 30px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .tag {
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #333;
-    backdrop-filter: blur(4px);
-}
-
-.image-item.border {
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    background-color: #fff;
-}
-
-/* Tag Colors */
-/* roblox studio */
-.studio {
-    background-color: #00e6fe;
-}
-/* game design  */
-.roblox {
-    background-color: #4c5362;
-}
-/* marketing*/
-.marketing {
-    background-color: #ff52d4;
-}
-/* programming */
-.programming {
-    background-color: #b86eff;
-}
-/* photoshop*/
-.photoshop {
-    background-color: #56ccf2;
-}
-/* competition */
-.competition {
-    background-color: #7ed957;
-}
-/* illustrator */
-.illustrator {
-    background-color: #ff9f1c;
-}
-/* figma */
-.figma {
-    background-color: #eb4b1e;
-}
-/* in design */
-.indesign {
-    background-color: #ff6b6b;
-}
-
-/* ux/ui */
-.ui {
-    background-color: #a5228a;
-}
-
-@media (max-width: 1024px) {
-    .image-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .image-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .image-container-wrapper {
-        padding: 0;
-        width: 100%;
-        max-width: none;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .image-container-wrapper .image-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        transform: none !important;
-        max-width: 400px;
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    .image-container-wrapper .image-item {
-        flex: none;
-        min-width: 100%;
-        width: 100%;
-        aspect-ratio: 1;
-        margin: 0 auto;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .project-section {
-        padding: 18px 6px 30px 6px;
-        max-width: 400px;
-        margin: 48px auto 0;
-    }
-
-    .project-section h4 {
-        font-size: 1.3rem;
-        padding-left: 10px;
-        text-align: center;
-    }
-
-    .section-navigation {
-        display: none !important;
-    }
-
-    .carousel-wrapper {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .carousel-track-container {
-        overflow: visible;
-    }
-
-    .carousel-track {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        transform: none !important;
-    }
-
-    .image-item {
-        flex: 0 0 100%;
-        min-width: 100%;
-        aspect-ratio: 1;
-        margin: 0 auto;
-    }
-}
-
-.project-section {
-    position: relative;
-    margin: 48px 0 0 0;
-    padding: 36px 24px 40px 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: hidden;
-    overflow-y: visible;
-}
-
-.project-section h4 {
-    font-size: 2.1rem;
-    color: #ff52d4;
-    margin-bottom: 24px;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
     font-weight: 700;
-    text-shadow: 0 2px 12px rgba(255, 82, 212, 0.1);
-    padding-left: 18px;
-    border-radius: 8px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag.ui { background: rgba(165, 34, 138, 0.1); color: #a5228a; }
+.tag.figma { background: rgba(235, 75, 30, 0.1); color: #eb4b1e; }
+.tag.studio { background: rgba(0, 230, 254, 0.1); color: #00b0c2; }
+.tag.roblox { background: rgba(76, 83, 98, 0.1); color: #4c5362; }
+.tag.marketing { background: rgba(255, 82, 212, 0.1); color: #ff52d4; }
+.tag.competition { background: rgba(126, 217, 87, 0.1); color: #5a9e3e; }
+.tag.illustrator { background: rgba(255, 159, 28, 0.1); color: #d48417; }
+.tag.photoshop { background: rgba(86, 204, 242, 0.1); color: #44a6c4; }
+.tag.indesign { background: rgba(255, 107, 107, 0.1); color: #e64a4a; }
+
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Breaks */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-    .project-section h3 {
-        font-size: 1.3rem;
-        padding-left: 10px;
+    .portfolio-header h1 {
+        font-size: 2.5rem;
     }
-    .section-navigation {
-        width: 32px;
-        height: 32px;
-        font-size: 16px;
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
-    
-    .section-navigation.prev {
-        left: 5px;
-    }
-    
-    .section-navigation.next {
-        right: 5px;
+    .card-image {
+        height: 250px;
     }
 }
 
-.section-navigation {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    color: #333;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.section-navigation:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.section-navigation.prev {
-    left: 10px;
-}
-
-.section-navigation.next {
-    right: 10px;
-}
-
-.section-navigation.hidden {
-    display: none;
-}
-
-body {
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-p {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.overlay p {
-    color: #333;
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0;
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding-top: 80px;
+    }
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+    .card-content h3 {
+        font-size: 1.5rem;
+    }
 }

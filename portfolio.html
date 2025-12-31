@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cherry Ke</title>
+    <title>Portfolio | Cherry Ke</title>
     <link rel="icon" type="image/x-icon" href="./images/cherryblossom.png">
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -19,178 +21,179 @@
             .then(data => document.getElementById('navbar').innerHTML = data);
     </script>
 
-    <!-- Image Section -->
-    <section class="image-gallery">
-        <h2>Explore My Work</h2>
-        <p>Welcome to my portfolio! Please hover the icons for more information at a glance. Feel free to contact me if you have any questions.</p>
-        <div class="project-section" id="projects">
-            <h4>Projects</h4>
-            <div class="image-container">
-                <div class="image-item">
-                    <a href="sabor.html">
+    <header class="portfolio-header">
+        <div class="container">
+            <h1>Selected Works</h1>
+            <p>A collection of digital experiences, brand identities, and design experiments.</p>
+            
+            <div class="filter-wrapper">
+                <div class="filter-container">
+                    <div class="filter-pill-bg"></div>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                    <button class="filter-btn" data-filter="game-design">Game Design</button>
+                    <button class="filter-btn" data-filter="graphics">Graphics</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="portfolio-grid-container">
+        <div class="projects-grid" id="portfolio-grid">
+            <!-- Game Design -->
+            <div class="project-card" data-category="game-design">
+                <a href="sabor.html">
+                    <div class="card-image">
                         <img src="./images/saborlogo.png" alt="Sabor">
-                        <div class="tags">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
                             <span class="tag studio">Roblox Studio</span>
                             <span class="tag roblox">Game Design</span>
-                            <span class="tag programming">Programming</span>
-                            <span class="tag ui">UI/UX</span>
                         </div>
-                        <div class="overlay">
-                            <h3>Sabor</h3>
-                            <p>Founded a Roblox group and developed games and products for the community.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <a href="sCanadian.html">
-                        <img src="./images/scanadian.png" alt="sCanadian">
-                        <div class="tags">
-                            <span class="tag competition">Hackathon</span>
-                            <span class="tag programming">Programming</span>
-                            <span class="tag ui">UI/UX</span>
-                        </div>
-                        <div class="overlay">
-                            <h3>sCanadian</h3>
-                            <p>Designed and developed a Canadian product scanner during Hack Canada 2025.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                
-            </div>
-        </div>
-        <div class="project-section" id="case-studies">
-            <h4>Case Studies</h4>
-            <div class="carousel-wrapper">
-                <button class="section-navigation prev" aria-label="Previous items">&lt;</button>
-                <div class="carousel-track-container">
-                    <div class="carousel-track">
-                        <div class="image-item">
-                            <a href="urbanecho.html">
-                                <img src="./images/urbanecho.png" alt="Urban Echo" class="fit-width">
-                                <div class="tags">
-                                    <span class="tag ui">UI/UX</span>
-                                    <span class="tag figma">Figma</span>
-                                    <span class="tag competition">Design Jam</span>
-                                </div>
-                                <div class="overlay">
-                                    <h3>Urban Echo</h3>
-                                    <p>Designed an application that reimagines civic issue reporting during Protothon 2025.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="image-item">
-                            <a href="bananasplit.html">
-                                <img src="./images/bananasplit.png" alt="Banana Split">
-                                <div class="tags">
-                                    <span class="tag ui">UI/UX</span>
-                                    <span class="tag figma">Figma</span>
-                                </div>
-                                <div class="overlay">
-                                    <h3>Banana Split</h3>
-                                    <p>Designed a grocery splitting application for university students.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="image-item">
-                            <a href="begym.html">
-                                <img src="./images/begym.png" alt="Begym ">
-                                <div class="tags">
-                                    <span class="tag ui">UI/UX</span>
-                                    <span class="tag figma">Figma</span>
-                                </div>
-                                <div class="overlay">
-                                    <h3>BeGym</h3>
-                                    <p>Designed a beginner-friendly fitness app.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="image-item">
-                            <a href="capsule.html">
-                                <img src="./images/capsulesquare.png" alt="Capsule" class="fit-width">
-                                <div class="tags">
-                                    <span class="tag ui">UI/UX</span>
-                                    <span class="tag figma">Figma</span>
-                                    <span class="tag competition">Design Jam</span>
-                                </div>
-                                <div class="overlay">
-                                    <h3>Capsule</h3>
-                                    <p>Designed a tool that reimagines remote work during Mosaic 2025.</p>
-                                </div>
-                            </a>
-                        </div>
-                        
+                        <h3>Sabor</h3>
+                        <p>Building a virtual community and café experience for 29k+ members.</p>
                     </div>
-                </div>
-                <button class="section-navigation next" aria-label="Next items">&gt;</button>
+                </a>
             </div>
-        </div>
 
-        <div class="project-section" id="branding">
-            <h4>Branding</h4>
-            <div class="image-container">
-                <div class="image-item border">
-                    <a href="astro.html">
+            <!-- UI/UX Case Studies -->
+            <div class="project-card" data-category="ui-ux">
+                <a href="urbanecho.html">
+                    <div class="card-image">
+                        <img src="./images/urbanecho.png" alt="Urban Echo">
+                        <div class="card-tag-floating">Design Jam</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag ui">UI/UX</span>
+                            <span class="tag figma">Figma</span>
+                        </div>
+                        <h3>Urban Echo</h3>
+                        <p>Reimagining civic issue reporting for modern communities.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="ui-ux">
+                <a href="bananasplit.html">
+                    <div class="card-image">
+                        <img src="./images/bananasplit.png" alt="Banana Split">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag ui">UI/UX</span>
+                            <span class="tag figma">Figma</span>
+                        </div>
+                        <h3>Banana Split</h3>
+                        <p>A grocery-splitting app tailored for university students.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="ui-ux">
+                <a href="begym.html">
+                    <div class="card-image">
+                        <img src="./images/begym.png" alt="Begym">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag ui">UI/UX</span>
+                            <span class="tag figma">Figma</span>
+                        </div>
+                        <h3>BeGym</h3>
+                        <p>Empowering beginners to start their fitness journey with confidence.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="ui-ux">
+                <a href="capsule.html">
+                    <div class="card-image">
+                        <img src="./images/capsulesquare.png" alt="Capsule">
+                        <div class="card-tag-floating">Design Jam</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag ui">UI/UX</span>
+                            <span class="tag figma">Figma</span>
+                        </div>
+                        <h3>Capsule</h3>
+                        <p>Redefining remote work collaboration tools for 2025.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="ui-ux">
+                <a href="sCanadian.html">
+                    <div class="card-image">
+                        <img src="./images/scanadian.png" alt="sCanadian">
+                        <div class="card-tag-floating">Hackathon</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag competition">Hack Canada</span>
+                            <span class="tag ui">UI/UX</span>
+                        </div>
+                        <h3>sCanadian</h3>
+                        <p>A smart scanner for identifying Canadian products in real-time.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Branding -->
+            <div class="project-card" data-category="branding">
+                <a href="astro.html">
+                    <div class="card-image">
                         <img src="./images/astro.png" alt="Astro">
-                        <div class="tags">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag marketing">Branding</span>
                             <span class="tag illustrator">Illustrator</span>
-                            <span class="tag photoshop">Photoshop</span>
                         </div>
-                        <div class="overlay">
-                            <h3>Astro Brand Repackage</h3>
-                            <p>A comprehensive brand redesign project focusing on modernizing Astro Yogurt's visual identity while maintaining its Canadian heritage. </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item border">
-                    <a href="rogers.html">
+                        <h3>Astro Brand Redesign</h3>
+                        <p>Modernizing a classic Canadian brand for a new generation.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="branding">
+                <a href="rogers.html">
+                    <div class="card-image">
                         <img src="./images/rogers.png" alt="Rogers">
-                        <div class="tags">
+                        <div class="card-tag-floating">Design Jam</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
                             <span class="tag competition">Design Jam</span>
+                            <span class="tag marketing">Branding</span>
                         </div>
-                        <div class="overlay">
-                            <h3>Rogers Brand Package</h3>
-                            <p>Designed a brand package for Rogers "Beyond The Seat" during the Rogers uXperience 2025 Design Jam.</p>
-                        </div>
-                    </a>
-                </div>
+                        <h3>Rogers: Beyond The Seat</h3>
+                        <p>Brand identity for a revolutionary fan engagement platform.</p>
+                    </div>
+                </a>
             </div>
-        </div>
 
-        <div class="project-section" id="graphics-design">
-            <h4>Graphics Design</h4>
-            <div class="image-container">
-                <div class="image-item">
-                    <a href="magazine.html">
-                        <img src="./images/magazinesquare.png" alt="Magazine cover">
-                        <div class="tags">
+            <!-- Graphics -->
+            <div class="project-card" data-category="graphics">
+                <a href="magazine.html">
+                    <div class="card-image">
+                        <img src="./images/magazinesquare.png" alt="Magazine">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
                             <span class="tag indesign">InDesign</span>
-                            <span class="tag illustrator">Illustrator</span>
                             <span class="tag photoshop">Photoshop</span>
                         </div>
-                        <div class="overlay">
-                            <h3>Magazine Design</h3>
-                            <p>Designed a magazine showcasing three assignments.</p>
-                        </div>
-                    </a>
-                </div>
+                        <h3>Magazine Editorial</h3>
+                        <p>Exploring layout, typography, and visual storytelling.</p>
+                    </div>
+                </a>
             </div>
         </div>
-
-        
-
-        <!-- website
-        <div class="image-item">
-            <a href="page3.html">
-                <img src="./images/enhypen.jpeg" alt="Enhypen">
-                <div class="overlay">
-                    <h3>Enhypen Fanpage</h3>
-                    <p>Designed and programmed a website (HTML & CSS).</p>
-                </div>
-            </a>
-        </div>
-        -->
-    </section>
+    </main>
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -199,57 +202,110 @@
     <script src="./scripts/footer.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.project-section');
-            
-            sections.forEach(section => {
-                const container = section.querySelector('.carousel-track-container');
-                const track = section.querySelector('.carousel-track');
-                const prevBtn = section.querySelector('.section-navigation.prev');
-                const nextBtn = section.querySelector('.section-navigation.next');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const pill = document.querySelector('.filter-pill-bg');
+            let filterTimeout;
+            let currentFilter = 'all';
+
+            function updatePill(btn) {
+                if (!pill || !btn) return;
+                pill.style.width = `${btn.offsetWidth}px`;
+                pill.style.height = `${btn.offsetHeight}px`;
+                pill.style.left = `${btn.offsetLeft}px`;
+                pill.style.top = `${btn.offsetTop}px`;
+            }
+
+            function applyFilter(filter, immediate = false) {
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`) || document.querySelector('.filter-btn[data-filter="all"]');
                 
-                if (!container || !track || !prevBtn || !nextBtn) return;
-                
-                const items = track.querySelectorAll('.image-item');
-                if (items.length <= 3) {
-                    prevBtn.style.display = 'none';
-                    nextBtn.style.display = 'none';
+                // Always update button state and pill immediately for instant feedback
+                filterBtns.forEach(b => b.classList.remove('active'));
+                if (targetBtn) {
+                    targetBtn.classList.add('active');
+                    updatePill(targetBtn);
+                }
+
+                currentFilter = filter;
+
+                if (immediate) {
+                    projectCards.forEach(card => {
+                        const categories = (card.getAttribute('data-category') || '').split(' ');
+                        const matches = filter === 'all' || categories.includes(filter);
+                        card.style.transition = 'none';
+                        card.style.display = matches ? 'block' : 'none';
+                        card.style.opacity = matches ? '1' : '0';
+                        card.style.transform = matches ? 'translateY(0)' : 'translateY(10px)';
+                    });
                     return;
                 }
-                
-                let currentIndex = 0;
-                const itemsPerView = 3;
-                const maxIndex = items.length - itemsPerView;
-                
-                function updateNavigation() {
-                    prevBtn.style.display = currentIndex > 0 ? 'flex' : 'none';
-                    nextBtn.style.display = currentIndex < maxIndex ? 'flex' : 'none';
-                }
-                
-                function scrollToIndex(index) {
-                    const offset = -index * (100 / itemsPerView);
-                    track.style.transform = `translateX(${offset}%)`;
-                    currentIndex = index;
-                    updateNavigation();
-                }
-                
-                prevBtn.addEventListener('click', () => {
-                    if (currentIndex > 0) {
-                        scrollToIndex(currentIndex - 1);
-                    }
+
+                // Start fade out for everything
+                projectCards.forEach(card => {
+                    card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(10px)';
                 });
-                
-                nextBtn.addEventListener('click', () => {
-                    if (currentIndex < maxIndex) {
-                        scrollToIndex(currentIndex + 1);
-                    }
+
+                if (filterTimeout) clearTimeout(filterTimeout);
+
+                filterTimeout = setTimeout(() => {
+                    // Only proceed if this is still the most recent filter request
+                    if (currentFilter !== filter) return;
+
+                    let visibleIndex = 0;
+                    projectCards.forEach(card => {
+                        const categories = (card.getAttribute('data-category') || '').split(' ');
+                        const matches = filter === 'all' || categories.includes(filter);
+
+                        if (matches) {
+                            card.style.display = 'block';
+                            // Slight delay to ensure 'display: block' has registered
+                            setTimeout(() => {
+                                if (currentFilter === filter) {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }
+                            }, 30 * visibleIndex);
+                            visibleIndex++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }, 250);
+            }
+
+            // Initialization
+            setTimeout(() => {
+                const hash = window.location.hash.replace('#', '');
+                applyFilter(hash || 'all', true);
+            }, 200);
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filter = btn.getAttribute('data-filter');
+                    history.pushState(null, null, `#${filter}`);
+                    applyFilter(filter);
                 });
-                
-                // Initialize
-                updateNavigation();
-                track.style.transition = 'transform 0.3s ease';
+            });
+
+            window.addEventListener('hashchange', () => {
+                const hash = window.location.hash.replace('#', '');
+                applyFilter(hash || 'all');
+            });
+
+            window.addEventListener('resize', () => {
+                const currentActive = document.querySelector('.filter-btn.active');
+                if (currentActive) updatePill(currentActive);
+            });
+
+            // Re-check pill position after fonts/images load to be safe
+            window.addEventListener('load', () => {
+                const currentActive = document.querySelector('.filter-btn.active');
+                if (currentActive) updatePill(currentActive);
             });
         });
     </script>
-      
 </body>
 </html>
