@@ -21,7 +21,7 @@
 
     <section>
         <div class="project">
-            <img src="./images/bananasplit.png" alt="Banana Split App">
+            <img src="./images/bananasplit.png" alt="Banana Split App" class="gallery-img">
             <div class="project-text">
                 <h2>Banana Split</h2>
                 <p>A collaborative grocery shopping app designed to help university students save money and reduce food waste by sharing bulk purchases.</p>
@@ -123,7 +123,7 @@
         </div>
 
         <div class="project">
-            <img src="./images/bananasplitprototype.png" alt="Banana Split Prototype">
+            <img src="./images/bananasplitprototype.png" alt="Banana Split Prototype" class="gallery-img">
             <div class="project-text">
                 <h2>Our Solution</h2>
                 <p>BananaSplit is a mobile app designed to help university students save money and reduce waste by making grocery shopping more collaborative. It connects students with others nearby who are interested in splitting bulk grocery purchases.</p>
@@ -232,7 +232,7 @@
             <h2>UI Gallery</h2>
             <div class="gallery-wrapper">
                 <button class="gallery-nav prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
-                <div class="gallery-container" id="galleryContainer">
+                <div class="gallery-container" id="ui-gallery-container">
                     <img src="./images/Home Page.png" alt="Home page" class="gallery-img">
                     <img src="./images/Lists.png" alt="Grocery lists" class="gallery-img">
                     <img src="./images/PublicGroceryList.png" alt="Public grocery list" class="gallery-img">
@@ -247,9 +247,7 @@
                 </div>
                 <button class="gallery-nav next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div class="gallery-pagination" id="galleryPagination"></div>
-        
-            
+            <div class="gallery-pagination" id="ui-gallery-pagination"></div>
         </section>
 
         <div class="project">
@@ -272,61 +270,5 @@
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/footer.js"></script>
     <script src="./scripts/gallery.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const container = document.getElementById('galleryContainer');
-            const prevBtn = document.getElementById('galleryPrev');
-            const nextBtn = document.getElementById('galleryNext');
-            const pagination = document.getElementById('galleryPagination');
-            const images = container.querySelectorAll('.gallery-img');
-            
-            // Create pagination dots
-            images.forEach((_, idx) => {
-                const dot = document.createElement('div');
-                dot.className = 'gallery-dot' + (idx === 0 ? ' active' : '');
-                pagination.appendChild(dot);
-            });
-
-            const dots = pagination.querySelectorAll('.gallery-dot');
-
-            // Update active dot on scroll
-            container.addEventListener('scroll', () => {
-                const containerCenter = container.scrollLeft + (container.offsetWidth / 2);
-                let closestIdx = 0;
-                let minDistance = Infinity;
-
-                images.forEach((img, idx) => {
-                    const imgCenter = img.offsetLeft - container.offsetLeft + (img.offsetWidth / 2);
-                    const distance = Math.abs(containerCenter - imgCenter);
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        closestIdx = idx;
-                    }
-                });
-                
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === closestIdx);
-                });
-            });
-
-            // Dot clicking
-            dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    const img = images[idx];
-                    const scrollAmount = img.offsetLeft - container.offsetLeft - (container.offsetWidth / 2) + (img.offsetWidth / 2);
-                    container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-                });
-            });
-
-            // Arrow navigation
-            prevBtn.addEventListener('click', () => {
-                container.scrollBy({ left: -container.offsetWidth / 2, behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', () => {
-                container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 </html>

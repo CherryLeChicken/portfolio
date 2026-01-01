@@ -309,61 +309,105 @@ p {
     opacity: 1;
 }
 
+.accordion-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .accordion {
-    background: #fff;
+    background: #ffffff;
     color: #333;
     cursor: pointer;
-    padding: 20px 25px;
+    padding: 22px 28px;
     width: 100%;
     text-align: left;
-    border: 1px solid rgba(255, 82, 212, 0.2);
+    border: 1px solid rgba(255, 82, 212, 0.15);
     outline: none;
-    transition: 0.4s;
-    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
-.accordion:after {
-    content: '\002B';
+.accordion i {
     color: #ff52d4;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
+    font-size: 0.9rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accordion.active {
     border-color: #ff52d4;
+    background: #fffbff;
+    box-shadow: 0 10px 25px rgba(255, 82, 212, 0.1);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
+.accordion.active i {
+    transform: rotate(180deg);
+}
+
 .accordion:hover {
-    background: #fdf2f9;
+    transform: translateY(-2px);
     border-color: #ff52d4;
+    box-shadow: 0 8px 25px rgba(255, 82, 212, 0.12);
 }
 
 .panel {
-    background: #fff;
+    background: #ffffff;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    border: 1px solid rgba(255, 82, 212, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 82, 212, 0.1);
     border-top: none;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 20px 20px;
+    opacity: 0;
 }
 
 .panel.open {
     max-height: 500px;
-    padding: 20px 25px;
+    opacity: 1;
+    border-color: #ff52d4;
+    padding-bottom: 10px;
+}
+
+.panel-content {
+    padding: 10px 28px 25px 28px;
+}
+
+.panel-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.panel-content li {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.panel-content li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        padding: 18px 22px;
+        font-size: 1rem;
+    }
+
+    .panel-content {
+        padding: 5px 22px 20px 22px;
+    }
 }
 
 ul {

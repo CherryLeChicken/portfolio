@@ -509,6 +509,147 @@ a {
     transform: translateX(0);
 }
 
+/* Lightbox Styles */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-controls {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    z-index: 2100;
+}
+
+.lightbox-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-btn:hover {
+    background: #ff52d4;
+    border-color: #ff52d4;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 82, 212, 0.4);
+}
+
+.lightbox-content-wrapper {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Zoomed State */
+.lightbox-content-wrapper.zoomed {
+    overflow: auto;
+    display: block; /* Allow natural scrolling */
+    cursor: zoom-out;
+}
+
+.lightbox-content-wrapper.zoomed .lightbox-content {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    transform: none;
+}
+
+.lightbox-content-wrapper.zoomed #lightbox-img {
+    max-width: 1000px; /* Width when zoomed */
+    max-height: none; /* Allow vertical growth */
+    width: 100%;
+    cursor: zoom-out;
+}
+
+#lightbox-caption {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.lightbox-content-wrapper.zoomed #lightbox-caption {
+    padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-controls {
+        top: 20px;
+        right: 20px;
+        gap: 15px;
+    }
+    
+    .lightbox-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .lightbox-content-wrapper.zoomed #lightbox-img {
+        max-width: 100%; /* Take full width on mobile when zoomed */
+    }
+    
+    #lightbox-img {
+        max-width: 95vw;
+    }
+}
+
 p {
     color: #333;
     font-size: 16px;
