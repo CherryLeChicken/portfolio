@@ -88,7 +88,77 @@ p {
     line-height: 1.8;
     margin-bottom: 20px;
 }
+.achievement-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 82, 212, 0.1);
+}
 
+.achievement-badge {
+    background: #fdf2f9;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 82, 212, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.achievement-badge::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.9) 30%,
+        rgba(255, 82, 212, 0.1) 50%,
+        rgba(255, 255, 255, 0.9) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.achievement-badge:hover {
+    transform: translateY(-2px);
+    border-color: #ff52d4;
+    box-shadow: 0 5px 15px rgba(255, 82, 212, 0.25);
+    background: #fffbff;
+}
+
+.achievement-badge:hover::after {
+    left: 150%;
+    opacity: 1;
+}
+
+.badge-icon {
+    color: #ff52d4;
+}
+
+.badge-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 600;
+}
+
+.badge-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #333;
+}
 .project {
     display: flex;
     align-items: center;
