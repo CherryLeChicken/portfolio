@@ -669,22 +669,6 @@ a {
     border: none;
 }
 
-.pdf-fallback {
-    display: block;
-    padding: 30px;
-    text-align: center;
-    background: rgba(255, 82, 212, 0.05);
-    border-radius: 24px;
-    margin: 20px 0;
-    border: 2px dashed rgba(255, 82, 212, 0.2);
-}
-
-.pdf-fallback p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #333;
-}
 
 @media (max-width: 768px) {
     .pdf-container {

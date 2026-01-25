@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Berry | Cherry Ke</title>
+    <link rel="icon" type="image/x-icon" href="./images/cherryblossom.png">
+    <link rel="stylesheet" href="assets/berry.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <section>
+        <div class="project">
+            <img src="./images/berry.png" alt="Berry App" class="gallery-img" onerror="this.style.display='none'">
+            <div class="project-text">
+                <h2>Berry</h2>
+                <p>Berry transforms your cycle into a self-care ritual. Nurture an AI garden that syncs with your body, and receive personalized affirmations and wellness tips to improve your health.</p>
+                
+                <div class="achievement-badges">
+                    <div class="achievement-badge">
+                        <i class="fas fa-trophy badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Major League Hacking</div>
+                            <div class="badge-value">Best Domain</div>
+                        </div>
+                    </div>
+                    <div class="achievement-badge">
+                        <i class="fas fa-users badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Team</div>
+                            <div class="badge-value">3 members</div>
+                        </div>
+                    </div>
+                    <div class="achievement-badge">
+                        <i class="fas fa-clock badge-icon"></i>
+                        <div class="badge-content">
+                            <div class="badge-title">Built in</div>
+                            <div class="badge-value">48 hours</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <a class="button" target="_blank" href="https://devpost.com/software/berry-mulvk6">View on Devpost</a>
+                    <a class="button" target="_blank" href="https://berryawesome.tech">Try Berry</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <h4>My Role</h4>
+                        <p>Co-creator & Designer</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Team</h4>
+                        <p>3 members</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Duration</h4>
+                        <p>48-hour hackathon</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Tech stack</h4>
+                        <p>HTML, CSS, JavaScript, Google Gemini API</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>Inspiration</h2>
+                <p>For the millions of women who track their cycle, the experience is often negative, clinical, and tedious. A study showed that apps were often designed to help users keep track of their current health rather than improve it (National Library of Medicine, 2023). On top of that, we learned that up to 90% of women experience mood-related PMS symptoms, creating a clear need for better mental wellness tools.</p>
+                <p>A pivotal Oxford University study showed that simple, engaging games can be beneficial for well-being. This was our lightbulb moment: we could combine the utility of a tracker with the gentle, rewarding nature of an idle game to create an experience that was genuinely positive and affirming.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>What It Does</h2>
+                <p>Berry is an AI-powered digital garden that reframes your menstrual cycle as a journey of self-care. Nurture a personal plant that grows and rests in sync with your body's natural rhythm.</p>
+                <h3>How It Works</h3>
+                <ul>
+                    <li><strong>Log Your Feelings:</strong> Each day, you can log your mood and symptoms with a simple interface.</li>
+                    <li><strong>Nurture Your Plant:</strong> Your daily check-in acts as a way to "water" or tend to your plant, creating a positive feedback loop. The plant's visual stage—from a new sprout to a flowering or fruit-bearing plant—reflects your current cycle phase.</li>
+                    <li><strong>Receive AI-Powered Empathy:</strong> Using the Google Gemini API, Berry generates personalized, empathetic affirmations and wellness tips based on your cycle phase and logged feelings. It also features a reliable AI chatbot for any questions, providing supportive and gentle guidance.</li>
+                </ul>
+                <p>We turned a data-heavy interface into a soothing, gamified ritual designed to empower women and de-stigmatize the menstrual cycle.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>How We Built It</h2>
+                <p>We built Berry in under 48 hours thanks to the help of vibe coding (&lt;3 Cursor and Co-pilot).</p>
+                <ul>
+                    <li><strong>Frontend:</strong> HTML and CSS</li>
+                    <li><strong>Backend:</strong> JavaScript paired with the Gemini API</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>Challenges & Accomplishments</h2>
+                <p>Our chatbot feature using the Gemini API would not work at first. It turned out we were hitting the rate limit, so we implemented backup code to work around this issue.</p>
+            
+            </div>
+        </div>
+
+        <section class="gallery">
+            <h2>Key Features</h2>
+            <div class="key-findings">
+                <div class="finding">
+                    <h4><i class="fas fa-calendar-check"></i> Track Your Cycle</h4>
+                    <p>Log mood and symptoms daily with a simple, gentle interface.</p>
+                </div>
+                <div class="finding">
+                    <h4><i class="fas fa-seedling"></i> Grow a Plant</h4>
+                    <p>Your AI garden grows and rests in sync with your body's rhythm.</p>
+                </div>
+                <div class="finding">
+                    <h4><i class="fas fa-fire"></i> Keep a Streak</h4>
+                    <p>Daily check-ins nurture your plant and build a rewarding self-care habit.</p>
+                </div>
+                <div class="finding">
+                    <h4><i class="fas fa-robot"></i> AI-Powered Support</h4>
+                    <p>Personalized affirmations and wellness tips via the Gemini API.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="project">
+            <div class="project-text">
+                <h2>Reflection</h2>
+                <p>During this hackathon we were able to leverage AI tools like Cursor and Vercel to quickly develop and create our lovely application. Berry awesome, right?!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/footer.js"></script>
+</body>
+</html>
