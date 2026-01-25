@@ -73,10 +73,18 @@
             </div>
         </div>
 
-        <div class="diptych-container">
-            <img src="./images/poster1.jpg" alt="V1 Horror Home Screen" class="diptych-image">
-            <img src="./images/poster2.jpg" alt="V1 Horror Gameplay" class="diptych-image">
-        </div>
+        <section class="gallery">
+            <h2>Horror-Themed Diptych Posters</h2>
+            <div class="gallery-wrapper">
+                <button class="gallery-nav prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-container" id="ui-gallery-container">
+                    <img src="./images/poster1.jpg" alt="V1 Horror Home Screen" class="gallery-img">
+                    <img src="./images/poster2.jpg" alt="V1 Horror Gameplay" class="gallery-img">
+                </div>
+                <button class="gallery-nav next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="gallery-pagination" id="ui-gallery-pagination"></div>
+        </section>
 
         <div class="project">
             <div class="project-text">
@@ -108,5 +116,6 @@
 
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/footer.js"></script>
+    <script src="./scripts/gallery.js"></script>
 </body>
 </html>
